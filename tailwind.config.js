@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  darkMode: "class", // ✅ Dark Mode এর জন্য class-based সিস্টেম
+  content: ["./src/**/*.{js,jsx,ts,tsx}"], // ✅ সব ফাইলে Tailwind কাজ করবে
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
