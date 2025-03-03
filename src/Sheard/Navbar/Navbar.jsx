@@ -42,7 +42,7 @@ const Navbar = () => {
           </button>
 
           {/* Login Button */}
-          <Link to="/login" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+          <Link to="/login" className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-blue-600">
             Login
           </Link>
 
