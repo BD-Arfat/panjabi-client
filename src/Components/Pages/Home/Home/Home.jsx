@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import BrandName from '../BrandName/BrandName';
 import WeddingStyleGuide from '../WeddingStyleGuide/WeddingStyleGuide';
 import TrendingCategories from '../TrendingCategories/TrendingCategories';
+import OfferBanner from '../OfferBanner/OfferBanner';
 
 const Home = () => {
     return (
@@ -16,6 +17,9 @@ const Home = () => {
             </div>
             <div className="my-12">
             <TrendingCategories></TrendingCategories>
+            </div>
+            <div className="my-12">
+            <OfferBanner></OfferBanner>
             </div>
         </div>
     );
