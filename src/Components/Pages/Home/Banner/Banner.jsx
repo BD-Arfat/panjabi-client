@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "../../../../assets/panjabi-banner-2.jpg"; // ইমেজ পাথ ঠিক রাখো
+import bannerImage from "../../../../assets/sellor.jpg"; // ইমেজ পাথ ঠিক রাখো
 
 const Banner = () => {
   return (
@@ -13,8 +13,8 @@ const Banner = () => {
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent flex items-center justify-center">
-        <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold text-center px-4 leading-snug shadow-md transition-all duration-300 hover:scale-105">
-          The Best Collection of <span className="text-yellow-400">Punjabi</span>!
+        <h1 className="text-white relative md:top-10 md:right-72 md:w-1/2 md:text-left text-3xl md:text-5xl lg:text-6xl font-bold text-center px-4 leading-snug shadow-md transition-all duration-300 hover:scale-105">
+        You will find good quality  <span className="text-yellow-400"> products here.</span>!
         </h1>
       </div>
     </div>

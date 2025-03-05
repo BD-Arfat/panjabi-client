@@ -4,6 +4,7 @@ import BrandName from '../BrandName/BrandName';
 import WeddingStyleGuide from '../WeddingStyleGuide/WeddingStyleGuide';
 import TrendingCategories from '../TrendingCategories/TrendingCategories';
 import OfferBanner from '../OfferBanner/OfferBanner';
+import ProductSlider from '../ProductSlider/ProductSlider';
 
 const Home = () => {
     return (
@@ -20,6 +21,9 @@ const Home = () => {
             </div>
             <div className="my-12">
             <OfferBanner></OfferBanner>
+            </div>
+            <div className="md:mt-28 mb-10">
+            <ProductSlider></ProductSlider>
             </div>
         </div>
     );
