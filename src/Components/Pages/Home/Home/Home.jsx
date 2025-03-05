@@ -5,6 +5,8 @@ import WeddingStyleGuide from '../WeddingStyleGuide/WeddingStyleGuide';
 import TrendingCategories from '../TrendingCategories/TrendingCategories';
 import OfferBanner from '../OfferBanner/OfferBanner';
 import ProductSlider from '../ProductSlider/ProductSlider';
+import EidShopBanner from '../EidShopBanner/EidShopBanner';
+import EidOfferProducts from '../EidOfferProducts/EidOfferProducts';
 
 const Home = () => {
     return (
@@ -24,6 +26,12 @@ const Home = () => {
             </div>
             <div className="md:mt-28 mb-10">
             <ProductSlider></ProductSlider>
+            </div>
+            <div className="md:mt-28 mb-10">
+            <EidShopBanner></EidShopBanner>
+            </div>
+            <div className="md:mt-28 mb-10">
+            <EidOfferProducts></EidOfferProducts>
             </div>
         </div>
     );

@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineHeart, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-
-
-const ProductSlider = () => {
+const EidOfferProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         fetch("products.json") // API URL পরিবর্তন করুন
             .then((res) => res.json())
             .then((data) => {
-                const filterProduct = data.filter(product => product.section === 'New-Arrivals');
-                setProducts(filterProduct)
+                const filterdata = data.filter( product => product.section === 'eid');
+                setProducts(filterdata)
             })
             .catch((error) => console.error("Error fetching products:", error));
     }, []);
@@ -51,9 +49,9 @@ const ProductSlider = () => {
 
     return (
         <div className="w-full p-4">
-            <h2 className="text-2xl font-bold text-center mb-4">New Arrivals</h2>
+            <h2 className="text-2xl font-bold text-center mb-4">EID OFFER</h2>
             <div className="text-center mb-4">
-                <span className="px-4 py-1 bg-red-500  rounded-full">SPRING 2025</span>
+                <span className="px-4 py-1 bg-red-500  rounded-full">Eid 2k25</span>
             </div>
             <Slider {...settings}>
                 {products.map((product) => (
@@ -93,4 +91,4 @@ const CustomPrevArrow = (props) => {
     );
 };
 
-export default ProductSlider;
+export default EidOfferProducts;
