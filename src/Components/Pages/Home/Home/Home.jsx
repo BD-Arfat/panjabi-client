@@ -7,6 +7,7 @@ import OfferBanner from '../OfferBanner/OfferBanner';
 import ProductSlider from '../ProductSlider/ProductSlider';
 import EidShopBanner from '../EidShopBanner/EidShopBanner';
 import EidOfferProducts from '../EidOfferProducts/EidOfferProducts';
+import CustomerReview from '../CustomerReview/CustomerReview';
 
 const Home = () => {
     return (
@@ -32,6 +33,9 @@ const Home = () => {
             </div>
             <div className="md:mt-28 mb-10">
             <EidOfferProducts></EidOfferProducts>
+            </div>
+            <div className="md:mt-28 mb-10">
+            <CustomerReview></CustomerReview>
             </div>
         </div>
     );
