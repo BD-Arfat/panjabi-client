@@ -27,7 +27,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 text-lg font-medium text-gray-900 dark:text-white">
           <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
           <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
-          <li><Link to="/products" className="hover:text-blue-500">All Products</Link></li>
+          <li><Link to="/allProducts" className="hover:text-blue-500">All Products</Link></li>
           <li><Link to="/dashboard" className="hover:text-blue-500">Dashboard</Link></li>
         </ul>
 
@@ -42,7 +42,7 @@ const Navbar = () => {
           </button>
 
           {/* Login Button */}
-          <Link to="/login" className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-blue-600">
+          <Link to="/loginForm" className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-blue-600">
             Login
           </Link>
 

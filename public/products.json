@@ -3,68 +3,69 @@
         "id": 1,
         "name": "Traditional Panjabi",
         "price": 2500,
+        "category" : "man",
         "section" : "New-Arrivals", 
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/WJCppNlwe1AxG12VUpWlZ4owRJcGELBuicHnWDKM.jpg"
     },
     {
         "id": 2,
         "name": "Premium White Panjabi",
-        "price": 2800,
+        "price": 2800,"category" : "man",
         "section" : "New-Arrivals",
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/f59fdql1i0VDaWve3Rm0s276enhRCc4MW5UVM0QM.jpg"
     },
     {
         "id": 3,
         "name": "Black Stylish Panjabi",
-        "price": 2600,
+        "price": 2600,"category" : "man",
         "section" : "New-Arrivals",
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/sIxNs1q4D5QAnd6Os2Un5wmZWbYhwzzCIGFBi82r.jpg"
     },
     {
         "id": 4,
-        "name": "Elegant Blue Panjabi",
+        "name": "Elegant Blue Panjabi","category" : "man",
         "price": 3000,
         "section" : "New-Arrivals",
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/mVkGIO0rtlSC51NPNVHhQTbLpOkoNM2ywhlsUQ2Z.jpg"
     },
     {
         "id": 5,
-        "name": "Maroon Festive Panjabi",
+        "name": "Maroon Festive Panjabi","category" : "man",
         "price": 2700,
         "section" : "New-Arrivals",
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/AceyiRywqT7po0W3ZhGtXjenHSR5p9RDLTJiIVSh.jpg"
     },
     
     {
-        "id": 1,
-        "name": "Traditional Panjabi",
+        "id": 6,
+        "name": "Traditional Panjabi","category" : "woman",
         "price": 2500,
         "section" : "eid", 
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/qjAfVFZPGUdIj1PYkxGmUkMY3pNqUJStgGcEWood.jpg"
     },
     {
-        "id": 2,
-        "name": "Premium White Panjabi",
+        "id": 7,
+        "name": "Premium White Panjabi","category" : "woman",
         "price": 2800,
         "section" : "eid",
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/YMSAq4tZtdjhmL9zEKCnxpVJrqsaAMzymjhftgzu.jpg"
     },
     {
-        "id": 3,
-        "name": "Black Stylish Panjabi",
+        "id": 8,
+        "name": "Black Stylish Panjabi","category" : "woman",
         "price": 2600,
         "section" : "eid",
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/QgGASsAoMV8bfzUjHVbvDJgnyXGS74ONvlA69XAH.jpg"
     },
     {
-        "id": 4,
+        "id": 9,
         "name": "Elegant Blue Panjabi",
         "price": 3000,
         "section" : "eid",
         "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/ZtXFPzAtLHdpkt0LiykpAT1uaqw8ARa5GBQhnG0x.jpg"
     },
     {
-        "id": 5,
+        "id": 10,
         "name": "Maroon Festive Panjabi",
         "price": 2700,
         "section" : "eid",
