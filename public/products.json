@@ -1,74 +1,155 @@
 [
     {
         "id": 1,
-        "name": "Traditional Panjabi",
-        "price": 2500,
-        "category" : "man",
+        "name": "MENS KNIT T-SHIRT",
+        "price": 700,
+        "category" : "T-SHIRT",
+        "Color" : "orange",
+        "details" : "Brighten your wardrobe with our Men’s Knit T-Shirt in Orange. This half sleeve t-shirt, made from 100% cotton, offers a relaxed fit that is perfect for casual days. Pair it with your favorite denim shorts for a vibrant summer outfit.",
         "section" : "New-Arrivals", 
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/WJCppNlwe1AxG12VUpWlZ4owRJcGELBuicHnWDKM.jpg"
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/CwArtjkIBQkdfeQPuMYQDnsX1LZU8bNzRtr1BzLc.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/EwheG610s22fepWNqa2NGQhcKl97fFM3y0ySYfcK.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/CwArtjkIBQkdfeQPuMYQDnsX1LZU8bNzRtr1BzLc.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/DamgiLjFfquwfbeodFflZGRa3a4Er6OhbhMwxt2e.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/zPCj0AoxuCzUT5g5Ue968zMyeVZmXvfhyNivOnOb.jpg"
     },
     {
         "id": 2,
-        "name": "Premium White Panjabi",
-        "price": 2800,"category" : "man",
-        "section" : "New-Arrivals",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/f59fdql1i0VDaWve3Rm0s276enhRCc4MW5UVM0QM.jpg"
+        "name": "MENS KNIT T-SHIRT",
+        "price": 750,
+        "category" : "T-SHIRT",
+        "Color" : "light olive green",
+        "details" : "Introduce a pop of color to your wardrobe with our Men’s Knit T-Shirt in Light Olive Green. This relaxed fit t-shirt, made from 100% cotton, offers a comfortable and stylish option for everyday wear. Pair it with chinos for a smart-casual ensemble.",
+        "section" : "New-Arrivals", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/eOAfxSvIFJC4RKmioJyYGyI5adN2cTJR4THhSebY.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/w9xcOGMMRlTphRp0T1WTFDCz5TMmjS4tYstMs2wm.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/eOAfxSvIFJC4RKmioJyYGyI5adN2cTJR4THhSebY.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/MzywzzndAJMX6vDQNFnJyLQENLdsZTiTUI12CIZ9.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/yjR3TSoOx1dGmEap4vf2zH6WDRapnzhhQ4Rox6pH.jpg"
     },
     {
         "id": 3,
-        "name": "Black Stylish Panjabi",
-        "price": 2600,"category" : "man",
-        "section" : "New-Arrivals",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/sIxNs1q4D5QAnd6Os2Un5wmZWbYhwzzCIGFBi82r.jpg"
+        "name": "MENS KNIT T-SHIRT",
+        "price": 850,
+        "category" : "T-SHIRT",
+        "Color" : " white",
+        "details" : "Stay fresh and stylish with our Men’s Knit T-Shirt in White. Crafted from 100% cotton, this relaxed fit t-shirt is perfect for sunny days or casual outings. The half sleeve design allows for airflow and comfort. Wear it with shorts for a laid-back vibe.",
+        "section" : "New-Arrivals", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/JI9uViDaljHOp5KNr9QO5AeM69K1LNak2w2SRs35.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/2Ts0ju1cfs2xor18rWdgFelxgzXLXJ0vT9bVKMd6.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/gynxNomq8Gm1P5BibP4lJucCcSmNLrkgH9vOMtne.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/JI9uViDaljHOp5KNr9QO5AeM69K1LNak2w2SRs35.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/fLmczX6TkR6mXKSUhlWofOXAiPQAH1BlmD8gwUPW.jpg"
     },
     {
         "id": 4,
-        "name": "Elegant Blue Panjabi","category" : "man",
-        "price": 3000,
-        "section" : "New-Arrivals",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/mVkGIO0rtlSC51NPNVHhQTbLpOkoNM2ywhlsUQ2Z.jpg"
+        "name": "MENS CASUAL SHIRT",
+        "price": 2090,
+        "category" : "shirt",
+        "Color" : " white",
+        "details" : "Refresh your everyday style with our Men’s Casual Shirt in White. Crafted from 100% cotton, this shirt ensures breathability and comfort throughout the day. The slim fit design flatters your physique, while the full sleeves cater to both casual and semi-formal occasions. Ideal for pairing with jeans or chinos, it’s a wardrobe essential.",
+        "section" : "New-Arrivals", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/WzYCR713qD91r8QmkulYa2mCU3mNeCEziL02yF5N.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/sV4xaZSfPyWDM36XDGvjzGusB8ixK4iXjWvNe1wq.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/H2iRufCie5MlVoEfCDk3ZHBso3seWLWBk29E65XM.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/iMA6Scw3mCTbmGfJWdLPYOuBRjnYxjEBN17c34iE.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/5huSLlASRYM9ZoogJP0Y3F7MVNIZF7mW5wRZ10G7.jpg"
     },
     {
         "id": 5,
-        "name": "Maroon Festive Panjabi","category" : "man",
-        "price": 2700,
-        "section" : "New-Arrivals",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/AceyiRywqT7po0W3ZhGtXjenHSR5p9RDLTJiIVSh.jpg"
+        "name": "MENS CASUAL SHIRT",
+        "price": 1790,
+        "category" : "shirt",
+        "Color" : "orange",
+        "details" : "Add a vibrant touch to your wardrobe with our Men’s Casual Shirt in Orange. Crafted from 100% viscose, this slim-fit shirt is soft against the skin. The half sleeve style is ideal for casual days and outings, pairing well with shorts or jeans for a fun, relaxed outfit.",
+        "section" : "New-Arrivals", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/10YQK8wxoT9zlIqmotQPieP4odPuOQMMLWDkWi6F.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/OgI5VbdqyyIkcHJ89kK0SE7NiDZAS1kQlRBqElnn.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/DZ6EyZMCppKbGd4xFoA9kf1Bx6ZTEqbwOaDqnPuR.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/dC5XrnShNVBrRRexYLiD841e1to5gEvuwbWWJ1jk.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/TJYo0dmZ1U065jo4XviJYBF7tKB2v3vmEie5cUw1.jpg"
     },
     
     {
         "id": 6,
-        "name": "Traditional Panjabi","category" : "woman",
-        "price": 2500,
+        "name": "WOVEN LONG KURTI",
+        "price": 3300,
+        "category" : "woman",
+        "Color" : " red",
+        "details" : "Radiate confidence in our Women's Woven Long Kurti in Red. Made from high-quality 100% cotton, this kurti features a regular fit that flatters every figure. The three-quarter sleeves offer a stylish touch, making it suitable for various occasions. Effortlessly pair it with jeans or palazzos to create a stunning look.",
         "section" : "eid", 
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/qjAfVFZPGUdIj1PYkxGmUkMY3pNqUJStgGcEWood.jpg"
-    },
-    {
-        "id": 7,
-        "name": "Premium White Panjabi","category" : "woman",
-        "price": 2800,
-        "section" : "eid",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/YMSAq4tZtdjhmL9zEKCnxpVJrqsaAMzymjhftgzu.jpg"
-    },
-    {
-        "id": 8,
-        "name": "Black Stylish Panjabi","category" : "woman",
-        "price": 2600,
-        "section" : "eid",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/QgGASsAoMV8bfzUjHVbvDJgnyXGS74ONvlA69XAH.jpg"
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/FkwfOSljF38K8YO6KtU0UyiuyWyroglATmhU38MU.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/YjNS0GDhXHftiOhIY95qUvDmXEBi8G28qYKt9v0e.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/DZ6EyZMCppKbGd4xFoA9kf1Bx6ZTEqbwOaDqnPuR.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/mdMzH4oBMbQsKYAj9XEeV3SV6aHb9houDeqvToFN.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/sVqQXqPBhSDW9HOUefrWI0EhWH5elTuuk5vRyBrR.jpg"
     },
     {
         "id": 9,
-        "name": "Elegant Blue Panjabi",
-        "price": 3000,
-        "section" : "eid",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/ZtXFPzAtLHdpkt0LiykpAT1uaqw8ARa5GBQhnG0x.jpg"
+        "name": "MENS FUSION PANJABI",
+        "price": 3400,
+        "category" : "panjabi",
+        "Color" : " nine iron",
+        "details" : "Our Nine Iron Men's Fusion Panjabi combines comfort with a sleek look. Made from 80% Cotton and 20% Polyester, it is perfect for both casual and formal settings.",
+        "section" : "eid", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/U2uHh92hShiVqHRxnuXGn6yOawy1h65n7VClefCm.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/RJsIoxRLqONjj6zgXau7tc8XYLepW0bU5o1eAdct.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/9Hh5VtXmsuMBVWOso1yNuzz3dLNQSs1rDn68Z26R.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/QxTJFtSwTq96W9DTRrryRzQyuGTg9ItxZxmUUp8w.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/cVktAFSzd8gVVmB7G3cx8BnhYZU2E2um4ToNurji.jpg"
+    },
+    {
+        "id": 7,
+        "name": "WOMENS WOVEN KURTI",
+        "price": 5000,
+        "category" : "woman",
+        "Color" : " teal",
+        "details" : "Enhance your ethnic collection with our Women’s Woven Kurti in Teal. Made from 100% polyester, this kurti features a regular fit for everyday comfort. The gather sleeves add a stylish twist, making it a versatile choice for casual outings or festive events. Pair it with leggings for a chic appearance.",
+        "section" : "eid", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/YIHHiXNcoruqEgTDiT7xOYzWbqj4QqIMwfjayCRU.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/iBDQhXCFpPUfEJtSHKvb7YA2RVO1c8HPRQpwDlig.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/3Dg85mbCSmpc0SuqZh7sEi9uCp69QzkQU33bpr5Y.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/GhqkhPF3bJLkQSOnlT87QYZZNc7RujZiLcphP9dz.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/6MRk2iMV69BBH7CYWm7ubQlXl0iGw1BNXGaFfGKc.jpg"
     },
     {
         "id": 10,
-        "name": "Maroon Festive Panjabi",
-        "price": 2700,
-        "section" : "eid",
-        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/IuQAXfQC7ZkYdgbXXyw0nUMaXOjyxDruRrrfhxZ7.jpg"
+        "name": "WOVEN LONG TOPS",
+        "price": 3290,
+        "category" : "panjabi",
+        "Color" : " coffee",
+        "details" : "Embrace a sophisticated look with our Coffee Men's Fusion Panjabi. Crafted from 80% Cotton and 20% Polyester, this piece is both comfortable and stylish for all your outings.",
+        "section" : "eid", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/uyPvQvATguclogU2cu6rqrRMah96lrmh0flaOdJi.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/7b4dkx4xtm1WaOiJnHzFuZTXI4w0gRxau7SkPPjg.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/1O6rXSUDxF3NrArk8bWTPqeLuX3q2eehv3Dd2CwY.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/uM5SrlA3NJQaJ3iTQit1RzjPs1iUGIOvduYNjSTz.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/9WO2RcvsdN0fhFK9BcXDzWuDtOG7sglI4DRRyhC7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "WOVEN LONG TOPS",
+        "price": 2200,
+        "category" : "woman",
+        "Color" : " black",
+        "details" : "Elevate your essentials with our Women’s Woven Long Top in Black. This regular fit top is perfect for any occasion, made from 100% polyester. The bell sleeve design adds a touch of sophistication. Wear it with tailored trousers for a smart outfit.",
+        "section" : "eid", 
+        "image": "https://d1190btxnvweoc.cloudfront.net/uploads/all/4lcK6cg02RixhYocERug7YaDSV2Ix6uYQI4kw3D6.jpg",
+        "image2": "https://d1190btxnvweoc.cloudfront.net/uploads/all/tFrr9HRmNKNwkHhWanCkOnTz6c0X0lma7NZpdK5S.jpg",
+        "image3": "https://d1190btxnvweoc.cloudfront.net/uploads/all/fcInYlHA9B3aBx7xHQOlMybaCVgu8s8ysF57GV0h.jpg",
+        "image4": "https://d1190btxnvweoc.cloudfront.net/uploads/all/uM5SrlA3NJQaJ3iTQit1RzjPs1iUGIOvduYNjSTz.jpg",
+        "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/EVzLw8QZhuJV7SQVKYLDUadVhHhpwmndIV27FZoL.jpg"
+    },
+    {
+        "id": 11,
+        "category" : "SPRING 2025"
+    },
+    {
+        "id": 12,
+        "category" : "BOY'S SET"
+    },
+    {
+        "id": 13,
+        "category" : "GIRL'S SET"
     }
 ]
