@@ -8,36 +8,42 @@ import ProductSlider from '../ProductSlider/ProductSlider';
 import EidShopBanner from '../EidShopBanner/EidShopBanner';
 import EidOfferProducts from '../EidOfferProducts/EidOfferProducts';
 import CustomerReview from '../CustomerReview/CustomerReview';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     return (
-        <div>
-            <Banner></Banner>
-            <div className='my-10'>
-            <BrandName></BrandName>
+        <>
+            <Helmet>
+                <title>Home Page</title>
+            </Helmet>
+            <div>
+                <Banner></Banner>
+                <div className='my-10'>
+                    <BrandName></BrandName>
+                </div>
+                <div className="my-12">
+                    <WeddingStyleGuide></WeddingStyleGuide>
+                </div>
+                <div className="my-12">
+                    <TrendingCategories></TrendingCategories>
+                </div>
+                <div className="my-12">
+                    <OfferBanner></OfferBanner>
+                </div>
+                <div className="md:mt-28 mb-10">
+                    <ProductSlider></ProductSlider>
+                </div>
+                <div className="md:mt-28 mb-10">
+                    <EidShopBanner></EidShopBanner>
+                </div>
+                <div className="md:mt-28 mb-10">
+                    <EidOfferProducts></EidOfferProducts>
+                </div>
+                <div className="md:mt-28 mb-10">
+                    <CustomerReview></CustomerReview>
+                </div>
             </div>
-            <div className="my-12">
-            <WeddingStyleGuide></WeddingStyleGuide>
-            </div>
-            <div className="my-12">
-            <TrendingCategories></TrendingCategories>
-            </div>
-            <div className="my-12">
-            <OfferBanner></OfferBanner>
-            </div>
-            <div className="md:mt-28 mb-10">
-            <ProductSlider></ProductSlider>
-            </div>
-            <div className="md:mt-28 mb-10">
-            <EidShopBanner></EidShopBanner>
-            </div>
-            <div className="md:mt-28 mb-10">
-            <EidOfferProducts></EidOfferProducts>
-            </div>
-            <div className="md:mt-28 mb-10">
-            <CustomerReview></CustomerReview>
-            </div>
-        </div>
+        </>
     );
 };
 

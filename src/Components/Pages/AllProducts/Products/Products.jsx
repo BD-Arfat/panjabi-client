@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { AiOutlineHeart } from "react-icons/ai";
 
 const Products = () => {
@@ -29,6 +30,11 @@ const Products = () => {
     );
 
     return (
+        
+        <>
+        <Helmet>
+        <title>Products Page</title>
+      </Helmet>
         <div className="p-4 max-w-6xl mx-auto mt-28">
             {/* Search Input */}
             <input
@@ -97,6 +103,7 @@ const Products = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

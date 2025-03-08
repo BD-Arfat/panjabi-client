@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { FaGoogle } from 'react-icons/fa';
 
 const RegisterForm = () => {
     return (
+        <>
+        <Helmet>
+        <title>Register page</title>
+      </Helmet>
         <form className="space-y-6 max-w-md mx-auto p-6  rounded-xl shadow-lg mt-28 my-8">
             {/* Name Input */}
             <div>
@@ -66,11 +71,12 @@ const RegisterForm = () => {
                         type="button"
                         className="w-full px-4 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500 transition-all"
                     >
-                        <span className="font-semibold flex items-center justify-center gap-3">Login with <FaGoogle className='text-2xl text-yellow-500'></FaGoogle></span>
+                        <span className="font-semibold flex items-center justify-center gap-3">Register with <FaGoogle className='text-2xl text-yellow-500'></FaGoogle></span>
                     </button>
                 </div>
             </div>
         </form>
+        </>
     );
 };
 
