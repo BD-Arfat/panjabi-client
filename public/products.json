@@ -3,7 +3,8 @@
         "id": 1,
         "name": "MENS KNIT T-SHIRT",
         "price": 700,
-        "category" : "T-SHIRT",
+        "category" : "t-shirt",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/L2iamlLLocZmZ8AG5kSfYZQzu9UIbFgjqvToLuJV.jpg",
         "Color" : "orange",
         "details" : "Brighten your wardrobe with our Men’s Knit T-Shirt in Orange. This half sleeve t-shirt, made from 100% cotton, offers a relaxed fit that is perfect for casual days. Pair it with your favorite denim shorts for a vibrant summer outfit.",
         "section" : "New-Arrivals", 
@@ -17,7 +18,8 @@
         "id": 2,
         "name": "MENS KNIT T-SHIRT",
         "price": 750,
-        "category" : "T-SHIRT",
+        "category" : "t-shirt",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/L2iamlLLocZmZ8AG5kSfYZQzu9UIbFgjqvToLuJV.jpg",
         "Color" : "light olive green",
         "details" : "Introduce a pop of color to your wardrobe with our Men’s Knit T-Shirt in Light Olive Green. This relaxed fit t-shirt, made from 100% cotton, offers a comfortable and stylish option for everyday wear. Pair it with chinos for a smart-casual ensemble.",
         "section" : "New-Arrivals", 
@@ -31,7 +33,8 @@
         "id": 3,
         "name": "MENS KNIT T-SHIRT",
         "price": 850,
-        "category" : "T-SHIRT",
+        "category" : "t-shirt",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/L2iamlLLocZmZ8AG5kSfYZQzu9UIbFgjqvToLuJV.jpg",
         "Color" : " white",
         "details" : "Stay fresh and stylish with our Men’s Knit T-Shirt in White. Crafted from 100% cotton, this relaxed fit t-shirt is perfect for sunny days or casual outings. The half sleeve design allows for airflow and comfort. Wear it with shorts for a laid-back vibe.",
         "section" : "New-Arrivals", 
@@ -46,6 +49,7 @@
         "name": "MENS CASUAL SHIRT",
         "price": 2090,
         "category" : "shirt",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/dUBDeljaMPDQkmHuFxPBWczMW52eGcTzLRle9iec.jpg",
         "Color" : " white",
         "details" : "Refresh your everyday style with our Men’s Casual Shirt in White. Crafted from 100% cotton, this shirt ensures breathability and comfort throughout the day. The slim fit design flatters your physique, while the full sleeves cater to both casual and semi-formal occasions. Ideal for pairing with jeans or chinos, it’s a wardrobe essential.",
         "section" : "New-Arrivals", 
@@ -60,6 +64,7 @@
         "name": "MENS CASUAL SHIRT",
         "price": 1790,
         "category" : "shirt",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/dUBDeljaMPDQkmHuFxPBWczMW52eGcTzLRle9iec.jpg",
         "Color" : "orange",
         "details" : "Add a vibrant touch to your wardrobe with our Men’s Casual Shirt in Orange. Crafted from 100% viscose, this slim-fit shirt is soft against the skin. The half sleeve style is ideal for casual days and outings, pairing well with shorts or jeans for a fun, relaxed outfit.",
         "section" : "New-Arrivals", 
@@ -75,6 +80,7 @@
         "name": "WOVEN LONG KURTI",
         "price": 3300,
         "category" : "woman",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/rRX8Vds1I1OjFLEjJdn0dhUzGO1axsiPUPHVQkza.jpg",
         "Color" : " red",
         "details" : "Radiate confidence in our Women's Woven Long Kurti in Red. Made from high-quality 100% cotton, this kurti features a regular fit that flatters every figure. The three-quarter sleeves offer a stylish touch, making it suitable for various occasions. Effortlessly pair it with jeans or palazzos to create a stunning look.",
         "section" : "eid", 
@@ -89,6 +95,7 @@
         "name": "MENS FUSION PANJABI",
         "price": 3400,
         "category" : "panjabi",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/3Qm955zDD7N8ncVMTGaQEFGHNz19Ie3osxbbcoZx.jpg",
         "Color" : " nine iron",
         "details" : "Our Nine Iron Men's Fusion Panjabi combines comfort with a sleek look. Made from 80% Cotton and 20% Polyester, it is perfect for both casual and formal settings.",
         "section" : "eid", 
@@ -103,6 +110,7 @@
         "name": "WOMENS WOVEN KURTI",
         "price": 5000,
         "category" : "woman",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/rRX8Vds1I1OjFLEjJdn0dhUzGO1axsiPUPHVQkza.jpg",
         "Color" : " teal",
         "details" : "Enhance your ethnic collection with our Women’s Woven Kurti in Teal. Made from 100% polyester, this kurti features a regular fit for everyday comfort. The gather sleeves add a stylish twist, making it a versatile choice for casual outings or festive events. Pair it with leggings for a chic appearance.",
         "section" : "eid", 
@@ -117,6 +125,7 @@
         "name": "WOVEN LONG TOPS",
         "price": 3290,
         "category" : "panjabi",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/3Qm955zDD7N8ncVMTGaQEFGHNz19Ie3osxbbcoZx.jpg",
         "Color" : " coffee",
         "details" : "Embrace a sophisticated look with our Coffee Men's Fusion Panjabi. Crafted from 80% Cotton and 20% Polyester, this piece is both comfortable and stylish for all your outings.",
         "section" : "eid", 
@@ -131,6 +140,7 @@
         "name": "WOVEN LONG TOPS",
         "price": 2200,
         "category" : "woman",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/rRX8Vds1I1OjFLEjJdn0dhUzGO1axsiPUPHVQkza.jpg",
         "Color" : " black",
         "details" : "Elevate your essentials with our Women’s Woven Long Top in Black. This regular fit top is perfect for any occasion, made from 100% polyester. The bell sleeve design adds a touch of sophistication. Wear it with tailored trousers for a smart outfit.",
         "section" : "eid", 
@@ -142,14 +152,17 @@
     },
     {
         "id": 11,
-        "category" : "SPRING 2025"
+        "category" : "KIDS/25",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/pQ4w9jgctIQJDw2enIGhIiiCuaaxTu318mV0yX84.jpg"
     },
     {
         "id": 12,
-        "category" : "BOY'S SET"
+        "category" : "BOY'S SET",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/DBqt1SakqbOcXx9pANMdy5GxRk60CtwL7U5BER55.jpg"
     },
     {
         "id": 13,
-        "category" : "GIRL'S SET"
+        "category" : "GIRL'S SET",
+        "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/ay78gK3zK3SwhjYs2jkg9NLcpx06v0xIOMJmy9cB.jpg"
     }
 ]

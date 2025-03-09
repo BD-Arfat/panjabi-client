@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { AiOutlineHeart } from "react-icons/ai";
+import { useParams } from 'react-router-dom';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -8,6 +9,8 @@ const Products = () => {
     const [search, setSearch] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceLimit, setPriceLimit] = useState(5000);
+    const {category} = useParams()
+    console.log(category)
 
     // Fetch products
     useEffect(() => {
