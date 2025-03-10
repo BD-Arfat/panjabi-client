@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        
         "name": "MENS KNIT T-SHIRT",
         "price": 700,
         "category" : "t-shirt",
@@ -15,7 +15,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/zPCj0AoxuCzUT5g5Ue968zMyeVZmXvfhyNivOnOb.jpg"
     },
     {
-        "id": 2,
+        
         "name": "MENS KNIT T-SHIRT",
         "price": 750,
         "category" : "t-shirt",
@@ -30,7 +30,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/yjR3TSoOx1dGmEap4vf2zH6WDRapnzhhQ4Rox6pH.jpg"
     },
     {
-        "id": 3,
+        
         "name": "MENS KNIT T-SHIRT",
         "price": 850,
         "category" : "t-shirt",
@@ -45,7 +45,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/fLmczX6TkR6mXKSUhlWofOXAiPQAH1BlmD8gwUPW.jpg"
     },
     {
-        "id": 4,
+        
         "name": "MENS CASUAL SHIRT",
         "price": 2090,
         "category" : "shirt",
@@ -60,7 +60,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/5huSLlASRYM9ZoogJP0Y3F7MVNIZF7mW5wRZ10G7.jpg"
     },
     {
-        "id": 5,
+        
         "name": "MENS CASUAL SHIRT",
         "price": 1790,
         "category" : "shirt",
@@ -76,7 +76,7 @@
     },
     
     {
-        "id": 6,
+        
         "name": "WOVEN LONG KURTI",
         "price": 3300,
         "category" : "woman",
@@ -91,7 +91,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/sVqQXqPBhSDW9HOUefrWI0EhWH5elTuuk5vRyBrR.jpg"
     },
     {
-        "id": 9,
+        
         "name": "MENS FUSION PANJABI",
         "price": 3400,
         "category" : "panjabi",
@@ -106,7 +106,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/cVktAFSzd8gVVmB7G3cx8BnhYZU2E2um4ToNurji.jpg"
     },
     {
-        "id": 7,
+        
         "name": "WOMENS WOVEN KURTI",
         "price": 5000,
         "category" : "woman",
@@ -121,7 +121,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/6MRk2iMV69BBH7CYWm7ubQlXl0iGw1BNXGaFfGKc.jpg"
     },
     {
-        "id": 10,
+        
         "name": "WOVEN LONG TOPS",
         "price": 3290,
         "category" : "panjabi",
@@ -136,7 +136,7 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/9WO2RcvsdN0fhFK9BcXDzWuDtOG7sglI4DRRyhC7.jpg"
     },
     {
-        "id": 8,
+        
         "name": "WOVEN LONG TOPS",
         "price": 2200,
         "category" : "woman",
@@ -151,17 +151,17 @@
         "image5": "https://d1190btxnvweoc.cloudfront.net/uploads/all/EVzLw8QZhuJV7SQVKYLDUadVhHhpwmndIV27FZoL.jpg"
     },
     {
-        "id": 11,
+        
         "category" : "KIDS/25",
         "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/pQ4w9jgctIQJDw2enIGhIiiCuaaxTu318mV0yX84.jpg"
     },
     {
-        "id": 12,
+        
         "category" : "BOY'S SET",
         "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/DBqt1SakqbOcXx9pANMdy5GxRk60CtwL7U5BER55.jpg"
     },
     {
-        "id": 13,
+        
         "category" : "GIRL'S SET",
         "categoryImage" : "https://d1190btxnvweoc.cloudfront.net/uploads/all/ay78gK3zK3SwhjYs2jkg9NLcpx06v0xIOMJmy9cB.jpg"
     }

@@ -9,12 +9,11 @@ const Products = () => {
     const [search, setSearch] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceLimit, setPriceLimit] = useState(5000);
-    const {category} = useParams()
-    console.log(category)
+    const { category } = useParams(); // URL থেকে ক্যাটাগরি নেওয়া
 
     // Fetch products
     useEffect(() => {
-        fetch('products.json')
+        fetch('/products.json')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -25,6 +24,13 @@ const Products = () => {
             });
     }, []);
 
+    // ক্যাটাগরি URL থেকে পেয়ে সেট করা
+    useEffect(() => {
+        if (category) {
+            setSelectedCategory((category)); // URL থেকে ক্যাটাগরি পেয়ে সেট করা
+        }
+    }, [category]);
+
     // Filtered products
     const filteredProducts = products.filter(product => 
         (selectedCategory === 'all' || product.category === selectedCategory) &&
@@ -33,11 +39,10 @@ const Products = () => {
     );
 
     return (
-        
         <>
         <Helmet>
-        <title>Products Page</title>
-      </Helmet>
+            <title>Products Page</title>
+        </Helmet>
         <div className="p-4 max-w-6xl mx-auto mt-28">
             {/* Search Input */}
             <input
@@ -50,18 +55,18 @@ const Products = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 {/* Sidebar (Categories & Price Filter) */}
-                <div className="md:col-span-1  p-4 rounded-lg">
+                <div className="md:col-span-1 p-4 rounded-lg">
                     <h2 className="font-bold mb-2">Categories</h2>
                     <ul>
-                        {categories.map((category, index) => (
+                        {categories.map((cat, index) => (
                             <li
                                 key={index}
                                 className={`p-2 cursor-pointer rounded text-sm md:text-base ${
-                                    selectedCategory === category ? "bg-yellow-800 text-white" : ""
+                                    selectedCategory === cat ? "bg-yellow-800 text-white" : ""
                                 }`}
-                                onClick={() => setSelectedCategory(category)}
+                                onClick={() => setSelectedCategory(cat)}
                             >
-                                {category}
+                                {cat}
                             </li>
                         ))}
                     </ul>
@@ -84,7 +89,7 @@ const Products = () => {
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((product) => (
                             <div key={product.id} className="p-2">
-                                <div className="relative rounded-lg shadow-lg overflow-hidden ">
+                                <div className="relative rounded-lg shadow-lg overflow-hidden">
                                     <img 
                                         src={product.image} 
                                         alt={product.name} 
