@@ -10,7 +10,7 @@ const ProductSlider = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("products.json") // API URL পরিবর্তন করুন
+        fetch("http://localhost:3000/products") // API URL পরিবর্তন করুন
             .then((res) => res.json())
             .then((data) => {
                 const filterProduct = data.filter(product => product.section === 'New-Arrivals');

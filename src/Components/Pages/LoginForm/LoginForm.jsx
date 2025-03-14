@@ -4,12 +4,20 @@ import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
+
+    const handleLogin = e => {
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password)
+    }
+
     return (
         <>
         <Helmet>
         <title>Login page</title>
       </Helmet>
-            <form className="space-y-6 max-w-md mx-auto p-6  rounded-xl shadow-lg mt-28 my-8">
+            <form onSubmit={handleLogin} className="space-y-6 max-w-md mx-auto p-6  rounded-xl shadow-lg mt-28 my-8">
 
                 {/* Email Input */}
                 <div>

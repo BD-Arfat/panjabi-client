@@ -13,7 +13,7 @@ const Products = () => {
 
     // Fetch products
     useEffect(() => {
-        fetch('/products.json')
+        fetch('http://localhost:3000/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);

@@ -14,6 +14,13 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const navItem = <>
+  <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
+          <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
+          <li><Link to={`/allProducts/all`} className="hover:text-blue-500">All Products</Link></li>
+          <li><Link to="/dashboard" className="hover:text-blue-500">Dashboard</Link></li>
+  </>
+
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-md w-full fixed top-0 z-50">
       <div className="container mx-auto px-4 md:px-6 lg:px-10 flex justify-between items-center py-4">
@@ -25,10 +32,7 @@ const Navbar = () => {
 
         {/* Large Screen Menu */}
         <ul className="hidden md:flex space-x-6 text-lg font-medium text-gray-900 dark:text-white">
-          <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
-          <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
-          <li><Link to={`/allProducts/all`} className="hover:text-blue-500">All Products</Link></li>
-          <li><Link to="/dashboard" className="hover:text-blue-500">Dashboard</Link></li>
+          {navItem}
         </ul>
 
         {/* Icons & Mobile Menu Button */}
@@ -56,11 +60,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-lg transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"}`}>
         <ul className="text-center text-lg font-medium text-gray-900 dark:text-white py-4">
-          <li className="py-2"><Link to="/" className="hover:text-blue-500" onClick={toggleMenu}>Home</Link></li>
-          <li className="py-2"><Link to="/about" className="hover:text-blue-500" onClick={toggleMenu}>About</Link></li>
-          <li className="py-2"><Link to="/products" className="hover:text-blue-500" onClick={toggleMenu}>All Products</Link></li>
-          <li className="py-2"><Link to="/dashboard" className="hover:text-blue-500" onClick={toggleMenu}>Dashboard</Link></li>
-          <li className="py-2"><Link to="/login" className="hover:text-blue-500" onClick={toggleMenu}>Login</Link></li>
+          {navItem}
         </ul>
       </div>
     </nav>
