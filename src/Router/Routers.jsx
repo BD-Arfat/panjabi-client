@@ -5,6 +5,8 @@ import Home from '../Components/Pages/Home/Home/Home';
 import Products from '../Components/Pages/AllProducts/Products/Products';
 import RegisterForm from '../Components/Pages/RegisterForm/RegisterForm';
 import LoginForm from '../Components/Pages/LoginForm/LoginForm';
+import Secret from '../Sheard/Secret/Secret';
+import PrivetRouts from './PrivetRouts';
 
 const Routers = createBrowserRouter([
     {
@@ -28,6 +30,10 @@ const Routers = createBrowserRouter([
                 path : '/loginForm',
                 element : <LoginForm></LoginForm>
             },
+            {
+                path : '/secret',
+                element : <PrivetRouts><Secret></Secret></PrivetRouts>
+            }
         ]
     }
 ])

@@ -51,14 +51,14 @@ const CustomerReview = () => {
       <Slider {...settings}>
         {reviews.map((review) => (
           <div key={review.id} className="p-4">
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <div className=" rounded-lg shadow-md p-6 text-center">
               <img
                 src={review.image}
                 alt={review.name}
                 className="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-gray-300"
               />
               <h3 className="text-lg font-semibold">{review.name}</h3>
-              <p className="text-gray-600 my-2">{review.review}</p>
+              <p className=" my-2">{review.review}</p>
               <div className="flex justify-center text-yellow-500 text-lg">
                 {Array.from({ length: review.rating }, (_, i) => (
                   <AiFillStar key={i} />

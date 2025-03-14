@@ -1,12 +1,16 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2"; // ✅ SweetAlert2 ইমপোর্ট করুন
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 const LoginForm = () => {
     const { loginUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const form = location.state?.from?.pathname || '/';
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -25,6 +29,7 @@ const LoginForm = () => {
                     confirmButtonColor: "#3085d6",
                     confirmButtonText: "OK",
                 });
+                navigate(form, {replace: true})
             })
             .catch((error) => {
                 // ❌ Login ব্যর্থ হলে Error Alert দেখানো হবে
