@@ -1,13 +1,49 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BsSun, BsMoon } from "react-icons/bs"; // Light/Dark Icons
 import useTheme from "../../hooks/useTheme"; // Custom Hook Import
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme(); // Theme State
   const [isOpen, setIsOpen] = useState(false); // Mobile Menu State
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogout = () => {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "Do you really want to logout?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Logout",
+        cancelButtonText: "Cancel",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            logOut()
+                .then(() => {
+                    Swal.fire({
+                        title: "Logged Out!",
+                        text: "You have successfully logged out.",
+                        icon: "success",
+                        confirmButtonColor: "#3085d6",
+                    });
+                })
+                .catch((error) => {
+                    Swal.fire({
+                        title: "Logout Failed!",
+                        text: error.message,
+                        icon: "error",
+                        confirmButtonColor: "#d33",
+                    });
+                });
+        }
+    });
+};
 
   // Toggle Function
   const toggleMenu = () => {
@@ -46,9 +82,17 @@ const Navbar = () => {
           </button>
 
           {/* Login Button */}
-          <Link to="/loginForm" className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-blue-600">
+          {
+            user? <>
+            <Link onClick={handleLogout} className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-blue-600">
+            LogOut
+          </Link>
+            </> : <>
+            <Link to="/loginForm" className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-blue-600">
             Login
           </Link>
+            </>
+          }
 
           {/* Mobile Menu Toggle Button */}
           <button onClick={toggleMenu} className="md:hidden text-2xl text-gray-900 dark:text-white">

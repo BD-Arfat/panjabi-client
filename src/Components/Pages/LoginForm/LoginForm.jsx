@@ -1,27 +1,56 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React, { useContext } from "react";
+import { Helmet } from "react-helmet";
+import { FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2"; // ✅ SweetAlert2 ইমপোর্ট করুন
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const LoginForm = () => {
+    const { loginUser } = useContext(AuthContext);
 
-    const handleLogin = e => {
-        e.preventDefault()
+    const handleLogin = (e) => {
+        e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password)
-    }
+
+        loginUser(email, password)
+            .then((res) => {
+                const user = res.user;
+
+                // ✅ সফল Login হলে Success Alert দেখানো হবে
+                Swal.fire({
+                    title: "Login Successful!",
+                    text: `Welcome, ${user.displayName || "User"}!`,
+                    icon: "success",
+                    confirmButtonColor: "#3085d6",
+                    confirmButtonText: "OK",
+                });
+            })
+            .catch((error) => {
+                // ❌ Login ব্যর্থ হলে Error Alert দেখানো হবে
+                Swal.fire({
+                    title: "Login Failed!",
+                    text: error.message,
+                    icon: "error",
+                    confirmButtonColor: "#d33",
+                    confirmButtonText: "Try Again",
+                });
+            });
+    };
 
     return (
         <>
-        <Helmet>
-        <title>Login page</title>
-      </Helmet>
-            <form onSubmit={handleLogin} className="space-y-6 max-w-md mx-auto p-6  rounded-xl shadow-lg mt-28 my-8">
+            <Helmet>
+                <title>Login page</title>
+            </Helmet>
 
+            <form
+                onSubmit={handleLogin}
+                className="space-y-6 max-w-md mx-auto p-6 rounded-xl shadow-lg mt-28 my-8"
+            >
                 {/* Email Input */}
                 <div>
-                    <label className="block  font-medium">Email</label>
+                    <label className="block font-medium">Email</label>
                     <input
                         type="email"
                         name="email"
@@ -33,7 +62,7 @@ const LoginForm = () => {
 
                 {/* Password Input */}
                 <div>
-                    <label className="block  font-medium">Password</label>
+                    <label className="block font-medium">Password</label>
                     <input
                         type="password"
                         name="password"
@@ -44,7 +73,12 @@ const LoginForm = () => {
                 </div>
 
                 <div>
-                    <p>You have not any acount: <Link className='text-green-400 underline' to={'/RegisterForm'}>pls register</Link></p>
+                    <p>
+                        You have not any account?{" "}
+                        <Link className="text-green-400 underline" to={"/RegisterForm"}>
+                            Please register
+                        </Link>
+                    </p>
                 </div>
 
                 {/* Submit Button */}
@@ -54,6 +88,7 @@ const LoginForm = () => {
                 >
                     Login Now
                 </button>
+
                 {/* Google Login Button */}
                 <div className="flex items-center space-x-3 mt-4">
                     <div className="w-full">
@@ -61,7 +96,9 @@ const LoginForm = () => {
                             type="button"
                             className="w-full px-4 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500 transition-all"
                         >
-                            <span className="font-semibold flex items-center justify-center gap-3">Login with <FaGoogle className='text-2xl text-yellow-500'></FaGoogle></span>
+                            <span className="font-semibold flex items-center justify-center gap-3">
+                                Login with <FaGoogle className="text-2xl text-yellow-500"></FaGoogle>
+                            </span>
                         </button>
                     </div>
                 </div>
