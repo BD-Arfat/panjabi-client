@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineHeart, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import Productsitem from "../../../../Sheard/ProductsItem";
 
 
 
@@ -57,18 +58,7 @@ const ProductSlider = () => {
             </div>
             <Slider {...settings}>
                 {products.map((product) => (
-                    <div key={product.id} className="p-2">
-                        <div className="relative  rounded-lg shadow-lg overflow-hidden">
-                            <img src={product.image} alt={product.name} className="w-full h-96 object-cover" />
-                            <button className="absolute top-3 right-3 text-xl  hover:text-red-500">
-                                <AiOutlineHeart />
-                            </button>
-                            <div className="p-4">
-                                <p className=" font-medium">{product.name}</p>
-                                <p className=" font-bold">৳ {product.price}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <Productsitem product={product}></Productsitem>
                 ))}
             </Slider>
         </div>

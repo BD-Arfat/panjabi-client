@@ -74,7 +74,9 @@ const Navbar = () => {
         {/* Icons & Mobile Menu Button */}
         <div className="flex items-center space-x-4">
           {/* Cart Icon */}
-          <FiShoppingCart className="text-2xl cursor-pointer text-gray-900 dark:text-white" />
+         <div className="flex gap-1">
+         <FiShoppingCart className="text-2xl cursor-pointer text-gray-900 dark:text-white" /><sup className="text-xl">10</sup>
+         </div>
 
           {/* Dark Mode Toggle Button */}
           <button onClick={toggleTheme} className="text-2xl text-gray-900 dark:text-white">

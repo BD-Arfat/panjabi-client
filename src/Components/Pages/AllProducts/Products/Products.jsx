@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { AiOutlineHeart } from "react-icons/ai";
 import { useParams } from 'react-router-dom';
+import Productsitem from '../../../../Sheard/ProductsItem';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -88,22 +89,7 @@ const Products = () => {
                 <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((product) => (
-                            <div key={product.id} className="p-2">
-                                <div className="relative rounded-lg shadow-lg overflow-hidden">
-                                    <img 
-                                        src={product.image} 
-                                        alt={product.name} 
-                                        className="w-full h-60 sm:h-72 lg:h-96 object-cover" 
-                                    />
-                                    <button className="absolute top-3 right-3 text-xl hover:text-red-500">
-                                        <AiOutlineHeart />
-                                    </button>
-                                    <div className="p-4">
-                                        <p className="font-medium text-sm sm:text-base">{product.name}</p>
-                                        <p className="font-bold text-sm sm:text-lg">৳ {product.price}</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <Productsitem product={product}></Productsitem>
                         ))
                     ) : (
                         <p className="col-span-full text-center text-lg font-semibold">No products found</p>

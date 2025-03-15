@@ -7,6 +7,7 @@ import RegisterForm from '../Components/Pages/RegisterForm/RegisterForm';
 import LoginForm from '../Components/Pages/LoginForm/LoginForm';
 import Secret from '../Sheard/Secret/Secret';
 import PrivetRouts from './PrivetRouts';
+import ProductsDetailsPage from '../Components/Pages/ProductsDetailsPage/ProductsDetailsPage';
 
 const Routers = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const Routers = createBrowserRouter([
             {
                 path : '/secret',
                 element : <PrivetRouts><Secret></Secret></PrivetRouts>
+            },
+            {
+                path : '/products/:id',
+                element : <ProductsDetailsPage></ProductsDetailsPage>,
+                loader : ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
             }
         ]
     }
