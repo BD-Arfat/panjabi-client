@@ -1,12 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import Productsitem from "../../../Sheard/ProductsItem";
+import useAuthContext from "../../../hooks/useAuthContext";
+import Swal from "sweetalert2";
+import useAxiosSecur from "../../../hooks/useAxiosSecur";
 
 const ProductsDetailsPage = () => {
     const product = useLoaderData();
     const [allProducts, setAllProducts] = useState([]);
     const [selectedImage, setSelectedImage] = useState(product.image);
     const [selectedSize, setSelectedSize] = useState("M");
+    const {user} = useAuthContext();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const axios = useAxiosSecur()
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
@@ -25,9 +32,47 @@ const ProductsDetailsPage = () => {
         product.image4,
         product.image5,
     ];
-
+    const {name,_id,price,category,image} = product
     const handleAddToCard = (productItme) =>{
-        console.log(productItme)
+        if(user && user.email){
+            const productItem = {
+                productId : _id,
+                email : user.email,
+                userName : user.displayName,
+                userImage : user.photoURL,
+                productImage : image,
+                price, 
+                category,
+                name,
+            }
+            axios.post('/carts', productItem)
+            .then(res =>{
+                if(res.data.insertedId){
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: `${name} added to your cart`,
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                }
+            })
+        }
+        else{
+            Swal.fire({
+                title: "You are not login",
+                text: "Please login to add to the cart?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, Login!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  navigate('/loginForm', {state : {from:location}})
+                }
+              });
+        }
     }
 
     // সম্পর্কিত প্রোডাক্ট গুলি (ধরা যাক, ক্যাটাগরি অনুযায়ী)
@@ -87,7 +132,7 @@ const ProductsDetailsPage = () => {
             </div>
 
             {/* সম্পর্কিত প্রোডাক্টস সেকশন */}
-            <div className="mt-10">
+            <div className="mt-10 md:w-11/12 md:mx-auto">
                 <h3 className="text-xl font-semibold mb-4 text-center md:text-left md:ml-5">Related Products</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-8 m-2">
                     {relatedProducts.map((relatedProduct) => (
