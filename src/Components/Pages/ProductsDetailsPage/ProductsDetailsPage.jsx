@@ -4,6 +4,7 @@ import Productsitem from "../../../Sheard/ProductsItem";
 import useAuthContext from "../../../hooks/useAuthContext";
 import Swal from "sweetalert2";
 import useAxiosSecur from "../../../hooks/useAxiosSecur";
+import useCarts from "../../../hooks/useCarts";
 
 const ProductsDetailsPage = () => {
     const product = useLoaderData();
@@ -13,7 +14,8 @@ const ProductsDetailsPage = () => {
     const {user} = useAuthContext();
     const navigate = useNavigate();
     const location = useLocation();
-    const axios = useAxiosSecur()
+    const axios = useAxiosSecur();
+    const [,refetch] = useCarts()
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
@@ -55,6 +57,7 @@ const ProductsDetailsPage = () => {
                         showConfirmButton: false,
                         timer: 1500
                       });
+                      refetch()
                 }
             })
         }

@@ -6,11 +6,13 @@ import { BsSun, BsMoon } from "react-icons/bs"; // Light/Dark Icons
 import useTheme from "../../hooks/useTheme"; // Custom Hook Import
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useCarts from "../../hooks/useCarts";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme(); // Theme State
   const [isOpen, setIsOpen] = useState(false); // Mobile Menu State
-  const {user, logOut} = useContext(AuthContext)
+  const {user, logOut} = useContext(AuthContext);
+  const [cart] = useCarts()
 
   const handleLogout = () => {
     Swal.fire({
@@ -74,9 +76,9 @@ const Navbar = () => {
         {/* Icons & Mobile Menu Button */}
         <div className="flex items-center space-x-4">
           {/* Cart Icon */}
-         <div className="flex gap-1">
-         <FiShoppingCart className="text-2xl cursor-pointer text-gray-900 dark:text-white" /><sup className="text-xl">10</sup>
-         </div>
+         <Link to={'/dashboard/cart'} className="flex gap-1">
+         <FiShoppingCart className="text-2xl cursor-pointer text-gray-900 dark:text-white" /><sup className="text-xl">{cart.length}</sup>
+         </Link>
 
           {/* Dark Mode Toggle Button */}
           <button onClick={toggleTheme} className="text-2xl text-gray-900 dark:text-white">
