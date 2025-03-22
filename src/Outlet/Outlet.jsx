@@ -8,7 +8,7 @@ const MainLayout = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={`min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all ease-in-out duration-500`}>
+    <div className={`min-h-screen flex flex-col bg-white dark:bg-gray-900  text-gray-900 dark:text-white transition-all ease-in-out duration-500`}>
       <Navbar />
       <main className="flex-grow">
         <Outlet />

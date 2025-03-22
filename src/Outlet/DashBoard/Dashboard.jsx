@@ -10,8 +10,8 @@ import useTheme from "../../hooks/useTheme";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const { theme } = useTheme();
-    
-      const {user, logOut} = useAuthContext();
+    const { user, logOut } = useAuthContext();
+
     const handleLogout = () => {
         Swal.fire({
             title: "Are you sure?",
@@ -44,10 +44,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             }
         });
     };
+
     return (
         <div
-            className={`fixed top-0 left-0 h-full bg-gray-900 text-white w-64 p-5 transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-64"
-                } md:translate-x-0  min-h-screen flex flex-col  dark:bg-gray-900 text-gray-900 dark:text-white transition-all ease-in-out duration-500`}
+            className={`fixed top-0 left-0 h-full w-64 bg-gray-900 text-white p-5 transform ${isOpen ? "translate-x-0" : "-translate-x-64"} md:translate-x-0 transition-transform duration-300 ease-in-out z-50`}
         >
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <MdDashboard /> Dashboard
@@ -68,7 +68,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <li onClick={handleLogout} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer text-red-400">
                     <FiLogOut /> Logout
                 </li>
-                <div  className="flex items-center gap-3 p-3">
+                <div className="flex items-center gap-3 p-3">
                     <img src={user?.photoURL} className="rounded-full w-10 h-10" alt="" />
                     <h1 className="font-bold text-lg">{user?.displayName}</h1>
                 </div>
@@ -79,23 +79,20 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
 const Dashboard = () => {
     const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleSidebar = () => setIsOpen(!isOpen);
 
     return (
-        <div className="flex min-h-screen ">
+        <div className="flex min-h-screen">
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-            <div className="flex-1 md:ml-64 p-6">
+            <div className="flex-1 md:ml-64 p-6 transition-all">
                 <button
-                    className="md:hidden mb-4 bg-gray-900 text-white p-2 rounded"
+                    className="md:hidden mb-4 bg-gray-900 text-white p-2 rounded fixed top-4 left-4 z-50"
                     onClick={toggleSidebar}
                 >
                     ☰
                 </button>
-                <div className={`min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all ease-in-out duration-500`}>
-                <Outlet></Outlet>
+                <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-500">
+                    <Outlet />
                 </div>
             </div>
         </div>

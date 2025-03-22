@@ -71,7 +71,7 @@ const TrendingCategories = () => {
 
 const CustomNextArrow = ({ onClick }) => (
   <button
-    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white border shadow-lg p-2 rounded-full z-10"
+    className="absolute right-4 top-1/2 transform -translate-y-1/2  border shadow-lg p-2 rounded-full z-10"
     onClick={onClick}
   >
     <AiOutlineRight className="text-xl" />
@@ -80,7 +80,7 @@ const CustomNextArrow = ({ onClick }) => (
 
 const CustomPrevArrow = ({ onClick }) => (
   <button
-    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white border shadow-lg p-2 rounded-full z-10"
+    className="absolute left-4 top-1/2 transform -translate-y-1/2  border shadow-lg p-2 rounded-full z-10"
     onClick={onClick}
   >
     <AiOutlineLeft className="text-xl" />

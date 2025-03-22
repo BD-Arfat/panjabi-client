@@ -13,6 +13,7 @@ const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <div  className={`min-h-screen flex flex-col bg-white  dark:bg-gray-900 text-gray-900 dark:text-white transition-all ease-in-out duration-500`}>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <HelmetProvider>
@@ -20,5 +21,6 @@ createRoot(document.getElementById('root')).render(
         </HelmetProvider>
       </AuthProvider>
     </QueryClientProvider>
+    </div>
   </StrictMode>,
 )

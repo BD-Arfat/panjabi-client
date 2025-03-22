@@ -5,6 +5,7 @@ import useAuthContext from "../../../hooks/useAuthContext";
 import Swal from "sweetalert2";
 import useAxiosSecur from "../../../hooks/useAxiosSecur";
 import useCarts from "../../../hooks/useCarts";
+import ReviewProducts from "./ReviewProducts/ReviewProducts";
 
 const ProductsDetailsPage = () => {
     const product = useLoaderData();
@@ -46,6 +47,7 @@ const ProductsDetailsPage = () => {
                 price, 
                 category,
                 name,
+                dateAdded: new Date().toLocaleString(),
             }
             axios.post('/carts', productItem)
             .then(res =>{
@@ -143,6 +145,9 @@ const ProductsDetailsPage = () => {
                     ))}
                 </div>
             </div>
+            <section className="md:w-11/12 md:mx-auto">
+                <ReviewProducts></ReviewProducts>
+            </section>
         </>
     );
 };
