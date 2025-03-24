@@ -4,11 +4,14 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2"; // ✅ SweetAlert2 ইমপোর্ট করুন
 import { AuthContext } from "../../../Providers/AuthProvider";
+import useAuthContext from "../../../hooks/useAuthContext";
+import GoogleFormFilUp from "../../../Sheard/googleFormFilUp/googleFormFilUp";
 
 const LoginForm = () => {
     const { loginUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+
 
     const form = location.state?.from?.pathname || '/';
 
@@ -29,7 +32,7 @@ const LoginForm = () => {
                     confirmButtonColor: "#3085d6",
                     confirmButtonText: "OK",
                 });
-                navigate(form, {replace: true})
+                navigate(form, { replace: true })
             })
             .catch((error) => {
                 // ❌ Login ব্যর্থ হলে Error Alert দেখানো হবে
@@ -95,18 +98,7 @@ const LoginForm = () => {
                 </button>
 
                 {/* Google Login Button */}
-                <div className="flex items-center space-x-3 mt-4">
-                    <div className="w-full">
-                        <button
-                            type="button"
-                            className="w-full px-4 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500 transition-all"
-                        >
-                            <span className="font-semibold flex items-center justify-center gap-3">
-                                Login with <FaGoogle className="text-2xl text-yellow-500"></FaGoogle>
-                            </span>
-                        </button>
-                    </div>
-                </div>
+                <GoogleFormFilUp></GoogleFormFilUp>
             </form>
         </>
     );

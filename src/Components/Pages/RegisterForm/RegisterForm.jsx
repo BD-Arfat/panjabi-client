@@ -4,9 +4,12 @@ import { FaGoogle } from "react-icons/fa";
 import Swal from "sweetalert2"; // ✅ SweetAlert2 ইমপোর্ট করুন
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import useAxiosPublick from "../../../hooks/useAxiosPublick";
+import GoogleFormFilUp from "../../../Sheard/googleFormFilUp/googleFormFilUp";
 
 const RegisterForm = () => {
     const { createUser } = useContext(AuthContext);
+    const axiosPublic = useAxiosPublick()
 
     const handleRegisterform = (e) => {
         e.preventDefault();
@@ -18,19 +21,34 @@ const RegisterForm = () => {
         createUser(email, password)
             .then((res) => {
                 const user = res.user;
+                console.log(user)
                 updateProfile(user, {
                     displayName: name,
                     photoURL: imageurl,
                 })
                     .then(() => {
-                        // ✅ সফল হলে Success Alert
-                        Swal.fire({
-                            title: "Registration Successful!",
-                            text: "Your account has been created successfully.",
-                            icon: "success",
-                            confirmButtonColor: "#3085d6",
-                            confirmButtonText: "OK",
-                        });
+
+                        const userInfo = {
+                            name: user.displayName,
+                            image: user.photoURL,
+                            email: user.email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                console.log(res)
+                                if (res.data.insertedId) {
+                                    // ✅ সফল হলে Success Alert
+                                    Swal.fire({
+                                        title: "Registration Successful!",
+                                        text: "Your account has been created successfully.",
+                                        icon: "success",
+                                        confirmButtonColor: "#3085d6",
+                                        confirmButtonText: "OK",
+                                    });
+                                }
+                            })
+
+
                     })
                     .catch(() => {
                         // ❌ Profile Update Failed Alert
@@ -122,18 +140,7 @@ const RegisterForm = () => {
                 </button>
 
                 {/* Google Login Button */}
-                <div className="flex items-center space-x-3 mt-4">
-                    <div className="w-full">
-                        <button
-                            type="button"
-                            className="w-full px-4 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500 transition-all"
-                        >
-                            <span className="font-semibold flex items-center justify-center gap-3">
-                                Register with <FaGoogle className="text-2xl text-yellow-500"></FaGoogle>
-                            </span>
-                        </button>
-                    </div>
-                </div>
+                <GoogleFormFilUp></GoogleFormFilUp>
             </form>
         </>
     );
