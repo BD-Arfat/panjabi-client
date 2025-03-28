@@ -55,7 +55,7 @@ const Carts = () => {
                 <div className="overflow-x-auto">
                     <table className="w-full border border-gray-200 rounded-lg text-center">
                         <thead>
-                            <tr className="bg-gray-100">
+                            <tr className="">
                                 <th className="p-3">Image</th>
                                 <th className="p-3">Name</th>
                                 <th className="p-3">Date or Time</th>
@@ -65,7 +65,7 @@ const Carts = () => {
                         </thead>
                         <tbody>
                             {products.map((product) => (
-                                <tr key={product.id} className="border-t hover:bg-gray-50 transition-all">
+                                <tr key={product.id} className="border-t transition-all">
                                     <td className="p-3">
                                         <img src={product.productImage} alt={product.name} className="w-12 h-12 object-cover mx-auto" />
                                     </td>

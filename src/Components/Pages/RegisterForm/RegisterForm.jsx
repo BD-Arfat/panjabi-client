@@ -31,7 +31,8 @@ const RegisterForm = () => {
                         const userInfo = {
                             name: user.displayName,
                             image: user.photoURL,
-                            email: user.email
+                            email: user.email,
+                            dateAdded: new Date().toLocaleString(),
                         }
                         axiosPublic.post('/users', userInfo)
                             .then(res => {

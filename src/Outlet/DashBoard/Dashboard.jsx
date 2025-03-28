@@ -12,6 +12,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     const { theme } = useTheme();
     const { user, logOut } = useAuthContext();
 
+    const isAdmin = true
+
     const handleLogout = () => {
         Swal.fire({
             title: "Are you sure?",
@@ -53,15 +55,30 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <MdDashboard /> Dashboard
             </h2>
             <ul className="space-y-4">
-                <Link to={'/'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                    <FiHome /> Home
-                </Link>
-                <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                    <FaUser /> Profile
-                </li>
-                <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                    <RiShoppingCart2Line /> Orders
-                </Link>
+                {
+                    isAdmin ? <>
+                        <Link to={'/'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <FiHome /> Home || Admin
+                        </Link>
+                        <Link to={'/dashboard/allUsers'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <FaUser /> All Users
+                        </Link>
+                        <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <RiShoppingCart2Line /> All Products
+                        </Link>
+                    </> : <>
+                        <Link to={'/'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <FiHome /> Home || User
+                        </Link>
+                        <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <FaUser /> Profile
+                        </li>
+                        <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <RiShoppingCart2Line /> Orders
+                        </Link>
+                    </>
+                }
+
                 <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                     <FiSettings /> Settings
                 </li>
