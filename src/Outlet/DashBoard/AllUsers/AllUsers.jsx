@@ -42,6 +42,31 @@ const AllUsers = () => {
                     })
             }
         });
+    };
+
+    const handleMakeAdmin = (user) => {
+        axiosSecure.patch(`/users/admin/${user._id}`)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.modifiedCount > 0){
+                    refetch()
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: "top-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.onmouseenter = Swal.stopTimer;
+                            toast.onmouseleave = Swal.resumeTimer;
+                        }
+                    });
+                    Toast.fire({
+                        icon: "success",
+                        title: "Admin Create successfull"
+                    });
+                }
+            })
     }
 
 
@@ -73,11 +98,11 @@ const AllUsers = () => {
                                         <td className="p-3 text-sm md:text-base">{product.name}</td>
                                         <td className="p-3 text-sm text-yellow-400 font-bold md:text-base">{product.dateAdded}</td>
                                         <td className="p-3 text-sm md:text-base">{product.email}</td>
-                                        <td className="p-3 text-sm md:text-base">Admin</td>
+                                        {product.role === 'admin' ? <h1 className="p-3 text-sm md:text-base cursor-pointer">Admin user</h1> :<td onClick={()=>handleMakeAdmin(product)} className="p-3 text-sm md:text-base cursor-pointer">Admin</td>}
                                         <td className="p-3">
                                             <button
                                                 onClick={() => deleteProduct(product._id)}
-                                                className="p-2 bg-red-500 rounded text-white hover:bg-red-600 transition-all"
+                                                className="p-2 bg-red-500  rounded text-white hover:bg-red-600 transition-all"
                                             >
                                                 <Trash size={16} />
                                             </button>

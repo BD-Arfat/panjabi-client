@@ -145,9 +145,10 @@ const ProductsDetailsPage = () => {
                     ))}
                 </div>
             </div>
-            <section className="md:w-11/12 md:mx-auto">
+            <section className="md:w-11/12 md:mx-auto mb-20">
                 <ReviewProducts></ReviewProducts>
             </section>
+
         </>
     );
 };
