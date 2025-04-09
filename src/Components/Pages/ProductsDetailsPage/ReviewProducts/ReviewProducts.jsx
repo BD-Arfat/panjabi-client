@@ -24,7 +24,9 @@ const ReviewProducts = () => {
         const rating = e.target.rating.value;
         const des = e.target.des.value;
         const productId = product._id;
-        const dataInfo = { name, email, productId, rating, des };
+        const userImage = user.photoURL;
+        const productName = product.name;
+        const dataInfo = { name, email, productId, productName, rating, des, userImage };
 
         axiosPublic.post('/review', dataInfo)
             .then(res => {
