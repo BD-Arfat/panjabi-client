@@ -11,6 +11,8 @@ import ProductsDetailsPage from '../Components/Pages/ProductsDetailsPage/Product
 import Dashboard from '../Outlet/DashBoard/Dashboard';
 import Carts from '../Components/Pages/Dashboard/Carts/Carts';
 import AllUsers from '../Outlet/DashBoard/AllUsers/AllUsers';
+import AddProducts from '../Components/Pages/Dashboard/AddProduct/AddProducts';
+import AllProducts from '../Components/Pages/Dashboard/AllProducts/AllProducts';
 
 const Routers = createBrowserRouter([
     {
@@ -57,6 +59,14 @@ const Routers = createBrowserRouter([
             {
                 path : 'allUsers',
                 element : <PrivetRouts><AllUsers></AllUsers></PrivetRouts>
+            },
+            {
+                path : 'allProduct',
+                element : <PrivetRouts><AllProducts></AllProducts></PrivetRouts>
+            },
+            {
+                path : 'addProduct',
+                element : <PrivetRouts><AddProducts></AddProducts></PrivetRouts>
             }
         ]
     }

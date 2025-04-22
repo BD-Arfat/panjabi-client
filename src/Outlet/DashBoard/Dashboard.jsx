@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import { FiHome, FiSettings, FiLogOut } from "react-icons/fi";
 import { MdDashboard } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
+import { FaDiceD6, FaUser } from "react-icons/fa";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { Link, Outlet } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuthContext";
 import Swal from "sweetalert2";
 import useTheme from "../../hooks/useTheme";
+import useAdmin from "../../hooks/useAdmin";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const { theme } = useTheme();
     const { user, logOut } = useAuthContext();
+    const [isuseAdmin] = useAdmin()
 
-    const isAdmin = true
+    const isAdmin = isuseAdmin;
 
     const handleLogout = () => {
         Swal.fire({
@@ -63,7 +65,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Link to={'/dashboard/allUsers'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <FaUser /> All Users
                         </Link>
-                        <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                        <Link to={'/dashboard/addProduct'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <FaDiceD6 /> Add Products
+                        </Link>
+                        <Link to={'/dashboard/allProduct'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <RiShoppingCart2Line /> All Products
                         </Link>
                     </> : <>

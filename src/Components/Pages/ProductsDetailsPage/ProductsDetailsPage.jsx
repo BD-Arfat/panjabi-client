@@ -32,8 +32,6 @@ const ProductsDetailsPage = () => {
         product.image,
         product.image2,
         product.image3,
-        product.image4,
-        product.image5,
     ];
     const {name,_id,price,category,image} = product
     const handleAddToCard = (productItme) =>{

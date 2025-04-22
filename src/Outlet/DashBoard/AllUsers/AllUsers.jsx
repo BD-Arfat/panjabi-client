@@ -87,7 +87,7 @@ const AllUsers = () => {
             <div className="overflow-x-auto">
                 <table className="w-full border border-gray-200 rounded-lg text-center">
                     <thead>
-                        <tr className="bg-gray-100">
+                        <tr className="">
                             <th className="p-3">Image</th>
                             <th className="p-3">Name</th>
                             <th className="p-3">Date or Time</th>
