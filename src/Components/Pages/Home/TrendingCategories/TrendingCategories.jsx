@@ -50,9 +50,9 @@ const TrendingCategories = () => {
             categories.map((category, index) => (
               <div
                 key={index}
-                className="relative p-5 group cursor-pointer overflow-hidden   text-center"
+                className="relative p-5 group cursor-pointer overflow-hidden mx-auto  text-center"
               >
-                <img src={category.categoryImage} alt="" />
+                <img className="h-80 mx-auto" src={category.categoryImage} alt="" />
                 <Link to={`/allProducts/${category.category}`} className="bottom-10 relative bg-white text-black py-2 border-black rounded-md px-4">
                 {
                   category.category

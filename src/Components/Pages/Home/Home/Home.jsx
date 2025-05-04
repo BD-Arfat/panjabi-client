@@ -5,10 +5,10 @@ import WeddingStyleGuide from '../WeddingStyleGuide/WeddingStyleGuide';
 import TrendingCategories from '../TrendingCategories/TrendingCategories';
 import OfferBanner from '../OfferBanner/OfferBanner';
 import ProductSlider from '../ProductSlider/ProductSlider';
-import EidShopBanner from '../EidShopBanner/EidShopBanner';
 import EidOfferProducts from '../EidOfferProducts/EidOfferProducts';
 import CustomerReview from '../CustomerReview/CustomerReview';
 import { Helmet } from 'react-helmet';
+import EidShopBanner from './EidShopBanner/EidShopBanner';
 
 const Home = () => {
     return (

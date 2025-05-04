@@ -13,6 +13,7 @@ import Carts from '../Components/Pages/Dashboard/Carts/Carts';
 import AllUsers from '../Outlet/DashBoard/AllUsers/AllUsers';
 import AddProducts from '../Components/Pages/Dashboard/AddProduct/AddProducts';
 import AllProducts from '../Components/Pages/Dashboard/AllProducts/AllProducts';
+import AllProductsEdit from '../Components/Pages/Dashboard/AllProductsEdit/AllProductsEdit';
 
 const Routers = createBrowserRouter([
     {
@@ -63,6 +64,11 @@ const Routers = createBrowserRouter([
             {
                 path : 'allProduct',
                 element : <PrivetRouts><AllProducts></AllProducts></PrivetRouts>
+            },
+            {
+                path : 'updateItem/:id',
+                element : <PrivetRouts><AllProductsEdit></AllProductsEdit></PrivetRouts>,
+                loader : ({params})=> fetch(`http://localhost:3000/products/${params.id}`)
             },
             {
                 path : 'addProduct',

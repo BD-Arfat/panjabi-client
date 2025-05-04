@@ -2,6 +2,9 @@ import React from 'react';
 import useAxiosSecur from '../../../../hooks/useAxiosSecur';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
+import { FaEdit } from 'react-icons/fa';
+import { FaDeleteLeft } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const AllProducts = () => {
     const axiosSecure = useAxiosSecur();
@@ -58,6 +61,7 @@ const AllProducts = () => {
                             <th className="py-3 px-4 text-left">Category</th>
                             <th className="py-3 px-4 text-left">Color</th>
                             <th className="py-3 px-4 text-left">Section</th>
+                            <th className="py-3 px-4 text-left">Edit Products</th>
                             <th className="py-3 px-4 text-left">Action</th>
                         </tr>
                     </thead>
@@ -71,7 +75,14 @@ const AllProducts = () => {
                                 <td className="py-3 px-4">{product.color}</td>
                                 <td className="py-3 px-4">{product.section}</td>
                                 <td className="py-3 px-4">
-                                    <button onClick={()=> deleteUser(product._id)} className="bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded text-sm">
+                                    <Link to={`/dashboard/updateItem/${product._id}`} onClick={()=> editUser(product._id)} className="bg-green-500 hover:bg-red-600 text-white px-4 py-1 rounded text-sm flex items-center gap-2">
+                                        <FaEdit/>
+                                        Edit Product
+                                    </Link>
+                                </td>
+                                <td className="py-3 px-4">
+                                    <button onClick={()=> deleteUser(product._id)} className="bg-red-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm flex items-center gap-2">
+                                        <FaDeleteLeft/>
                                         Delete
                                     </button>
                                 </td>
