@@ -84,6 +84,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </>
                 }
 
+                <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                    <RiShoppingCart2Line /> Your ordered product
+                </Link>
                 <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                     <FiSettings /> Settings
                 </li>

@@ -14,6 +14,7 @@ import AllUsers from '../Outlet/DashBoard/AllUsers/AllUsers';
 import AddProducts from '../Components/Pages/Dashboard/AddProduct/AddProducts';
 import AllProducts from '../Components/Pages/Dashboard/AllProducts/AllProducts';
 import AllProductsEdit from '../Components/Pages/Dashboard/AllProductsEdit/AllProductsEdit';
+import Payment from '../Components/Pages/Dashboard/PaymentLaouts/Payment';
 
 const Routers = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const Routers = createBrowserRouter([
             {
                 path : 'cart',
                 element : <PrivetRouts><Carts></Carts></PrivetRouts>
+            },
+            {
+                path : 'payments',
+                element : <PrivetRouts><Payment></Payment></PrivetRouts>
             },
             // Admin routs
             {

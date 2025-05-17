@@ -3,6 +3,7 @@ import useCarts from "../../../../hooks/useCarts";
 import { Trash, Plus, Minus } from "lucide-react";
 import Swal from "sweetalert2";
 import { axiosSecur } from "../../../../hooks/useAxiosSecur";
+import { Link } from "react-router-dom";
 
 const Carts = () => {
     const [cart, refetch] = useCarts();
@@ -27,19 +28,19 @@ const Carts = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 axiosSecur.delete(`/carts/${id}`)
-                .then(res => {
-                    if(res.data.deletedCount > 0){
-                        refetch()
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "Delete Success",
-                            showConfirmButton: false,
-                            timer: 1500
-                          });
-                         
-                    }
-                })
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
+                            refetch()
+                            Swal.fire({
+                                position: "top-end",
+                                icon: "success",
+                                title: "Delete Success",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+
+                        }
+                    })
             }
         });
     }
@@ -50,7 +51,13 @@ const Carts = () => {
                 <h1 className="text-2xl font-bold mb-8 text-center">Your Order Products</h1>
                 <div className="text-right flex flex-col md:flex-row items-center justify-between gap-3 mb-5">
                     <h1 className="text-xl font-bold text-center md:text-left">Total Price : {totalPrice}$</h1>
-                    <button className="bg-yellow-400 px-4 rounded-md py-2 font-bold w-full md:w-auto">PAY BUTTON</button>
+                    {
+                        cart.length ? <Link to={"/dashboard/payments"}>
+                        <button className="bg-yellow-400 px-4 rounded-md py-2 font-bold w-full md:w-auto">PAY BUTTON</button>
+                    </Link> : <Link  to={"/dashboard/payments"}>
+                        <button disabled className="bg-yellow-100 px-4 rounded-md py-2 font-bold w-full md:w-auto">PAY BUTTON</button>
+                    </Link>
+                    }
                 </div>
                 <div className="overflow-x-auto">
                     <table className="w-full border border-gray-200 rounded-lg text-center">
