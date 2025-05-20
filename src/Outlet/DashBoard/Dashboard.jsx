@@ -71,6 +71,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Link to={'/dashboard/allProduct'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <RiShoppingCart2Line /> All Products
                         </Link>
+                        <Link to={'/dashboard/allPayments'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                            <RiShoppingCart2Line /> All Payments
+                        </Link>
                     </> : <>
                         <Link to={'/'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <FiHome /> Home || User
@@ -86,6 +89,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
                 <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                     <RiShoppingCart2Line /> Your ordered product
+                </Link>
+                <Link to={'/dashboard/paymentHistory'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                    <RiShoppingCart2Line /> Your payment history
                 </Link>
                 <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                     <FiSettings /> Settings

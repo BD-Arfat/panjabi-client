@@ -1,18 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import useAxiosSecur from '../../../../hooks/useAxiosSecur';
+import useCarts from '../../../../hooks/useCarts';
+import useAuthContext from '../../../../hooks/useAuthContext';
 
 const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
+    const axiosSecure = useAxiosSecur();
+    const [cart, refetch] = useCarts();
+    const { user } = useAuthContext();
 
+    const [clientSecret, setClientSecret] = useState('');
     const [cardError, setCardError] = useState('');
     const [success, setSuccess] = useState('');
+    const [processing, setProcessing] = useState(false);
+
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
         address: '',
         phone: '',
     });
+
+    // Calculate total price
+    const price = cart.reduce((total, item) => total + item.price, 0);
+
+    // Create payment intent when price > 0
+    useEffect(() => {
+        if (price > 0) {
+            axiosSecure.post('/create-payment-intent', { price })
+                .then(res => {
+                    console.log('Client Secret:', res.data.clientSecret);
+                    setClientSecret(res.data.clientSecret);
+                })
+                .catch(error => {
+                    console.error('Payment Intent Error:', error);
+                });
+        }
+    }, [axiosSecure, price]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -21,11 +45,14 @@ const CheckoutForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (!stripe || !elements) return;
 
         const card = elements.getElement(CardElement);
-        if (card == null) return;
+        if (!card) return;
+
+        setProcessing(true);
+        setCardError('');
+        setSuccess('');
 
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
@@ -34,21 +61,60 @@ const CheckoutForm = () => {
                 name: formData.name,
                 email: formData.email,
                 phone: formData.phone,
-                address: {
-                    line1: formData.address,
-                },
+                address: { line1: formData.address },
             },
         });
 
         if (error) {
-            console.log('[error]', error);
+            console.log('[Payment Error]', error);
             setCardError(error.message);
-            setSuccess('');
-        } else {
-            console.log('[PaymentMethod]', paymentMethod);
-            setCardError('');
-            setSuccess('✅ Payment method created successfully!');
+            setProcessing(false);
+            return;
         }
+
+        console.log('[PaymentMethod]', paymentMethod);
+
+        const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: user?.displayName || formData.name,
+                        email: user?.email || formData.email,
+                    },
+                },
+            }
+        );
+
+        if (confirmError) {
+            console.log('[Confirm Error]', confirmError);
+            setCardError(confirmError.message);
+        } else {
+            if (paymentIntent.status === 'succeeded') {
+                console.log('[PaymentIntent]', paymentIntent);
+                setSuccess('✅ Payment successful!');
+                // Optional: save payment info to database
+                const payment = {
+                    email : user.email,
+                    name : user.displayName,
+                    userImage : user.image,
+                    address : formData.address,
+                    phone : formData.phone,
+                    price : price,
+                    date : new Date(),
+                    transactionId : paymentIntent.id,
+                    cardIds : cart.map(item => item._id),
+                    productIds : cart.map(item => item.productId)
+                }
+               const res = axiosSecure.post('/payments', payment);
+               refetch()
+            };
+
+
+        }
+
+        setProcessing(false);
     };
 
     return (
@@ -59,24 +125,7 @@ const CheckoutForm = () => {
             >
                 <h2 className="text-2xl font-semibold text-center mb-4">Complete Your Payment</h2>
 
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Full Name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full p-3 border rounded"
-                />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full p-3 border rounded"
-                />
+                
                 <input
                     type="text"
                     name="address"
@@ -117,10 +166,10 @@ const CheckoutForm = () => {
 
                 <button
                     type="submit"
-                    disabled={!stripe}
+                    disabled={!stripe || !clientSecret || processing}
                     className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
                 >
-                    Pay
+                    {processing ? 'Processing...' : `Pay $${price}`}
                 </button>
 
                 {cardError && <p className="text-red-500 text-sm text-center">{cardError}</p>}
