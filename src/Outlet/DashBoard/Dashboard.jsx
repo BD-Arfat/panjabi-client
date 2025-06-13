@@ -53,13 +53,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <div
             className={`fixed top-0 left-0 h-full w-64 bg-gray-900 text-white p-5 transform ${isOpen ? "translate-x-0" : "-translate-x-64"} md:translate-x-0 transition-transform duration-300 ease-in-out z-50`}
         >
+            <Link to={'/'}>
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <MdDashboard /> Dashboard
-            </h2>
+            </h2></Link>
             <ul className="space-y-4">
                 {
                     isAdmin ? <>
-                        <Link to={'/'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                        <Link to={'/dashboard/adminHome'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <FiHome /> Home || Admin
                         </Link>
                         <Link to={'/dashboard/allUsers'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
@@ -75,15 +76,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                             <RiShoppingCart2Line /> All Payments
                         </Link>
                     </> : <>
-                        <Link to={'/'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                        <Link to={'/dashboard/userHome'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <FiHome /> Home || User
                         </Link>
                         <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <FaUser /> Profile
                         </li>
-                        <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                            <RiShoppingCart2Line /> Orders
-                        </Link>
                     </>
                 }
 

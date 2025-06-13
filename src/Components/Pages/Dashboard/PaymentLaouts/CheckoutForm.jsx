@@ -9,6 +9,7 @@ const CheckoutForm = () => {
     const elements = useElements();
     const axiosSecure = useAxiosSecur();
     const [cart, refetch] = useCarts();
+    console.log(cart)
     const { user } = useAuthContext();
 
     const [clientSecret, setClientSecret] = useState('');
@@ -61,6 +62,7 @@ const CheckoutForm = () => {
                 name: formData.name,
                 email: formData.email,
                 phone: formData.phone,
+                category : cart.category,
                 address: { line1: formData.address },
             },
         });
@@ -100,6 +102,7 @@ const CheckoutForm = () => {
                     name : user.displayName,
                     userImage : user.image,
                     address : formData.address,
+                    category : cart.category,
                     phone : formData.phone,
                     price : price,
                     date : new Date(),

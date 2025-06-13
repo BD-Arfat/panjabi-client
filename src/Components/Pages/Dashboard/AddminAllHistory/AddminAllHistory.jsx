@@ -10,6 +10,7 @@ const AdminAllHistory = () => {
     const queryClient = useQueryClient();
 
     const { data: payments = [], isLoading } = useQuery({
+
         queryKey: ['adminPayments'],
         queryFn: async () => {
             const res = await axiosSecur.get('/admin/payments');
@@ -17,7 +18,7 @@ const AdminAllHistory = () => {
         },
         enabled: isAdmin // only fetch if admin
     });
-
+    console.log(payments)
     const mutation = useMutation({
         mutationFn: async ({ id, status }) => {
             const res = await axiosSecur.patch(`/payments/status/${id}`, { status });

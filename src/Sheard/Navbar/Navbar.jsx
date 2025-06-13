@@ -7,12 +7,14 @@ import useTheme from "../../hooks/useTheme"; // Custom Hook Import
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useCarts from "../../hooks/useCarts";
+import useAdmin from "../../hooks/useAdmin";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme(); // Theme State
   const [isOpen, setIsOpen] = useState(false); // Mobile Menu State
   const {user, logOut} = useContext(AuthContext);
-  const [cart] = useCarts()
+  const [cart] = useCarts();
+  const [isuseAdmin] = useAdmin()
 
   const handleLogout = () => {
     Swal.fire({
@@ -56,7 +58,12 @@ const Navbar = () => {
   <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
           <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
           <li><Link to={`/allProducts/all`} className="hover:text-blue-500">All Products</Link></li>
-          <li><Link to="/dashboard" className="hover:text-blue-500">Dashboard</Link></li>
+          {
+            user && isuseAdmin && <li><Link to="/dashboard/adminHome" className="hover:text-blue-500">Dashboard</Link></li>
+          }
+          {
+            user && !isuseAdmin && <li><Link to="/dashboard/userHome" className="hover:text-blue-500">Dashboard</Link></li>
+          }
   </>
 
   return (

@@ -17,6 +17,9 @@ import AllProductsEdit from '../Components/Pages/Dashboard/AllProductsEdit/AllPr
 import Payment from '../Components/Pages/Dashboard/PaymentLaouts/Payment';
 import PaymentHistory from '../Components/Pages/Dashboard/PaymentHistory/PaymentHistory';
 import AddminAllHistory from '../Components/Pages/Dashboard/AddminAllHistory/AddminAllHistory';
+import UserHome from '../Components/Pages/Dashboard/UserHome/UserHome';
+import AdminAllHistory from '../Components/Pages/Dashboard/AddminAllHistory/AddminAllHistory';
+import AdminHome from '../Components/Pages/Dashboard/AdminHome/AdminHome';
 
 const Routers = createBrowserRouter([
     {
@@ -56,6 +59,10 @@ const Routers = createBrowserRouter([
         element : <Dashboard></Dashboard>,
         children : [
             {
+                path : 'userHome',
+                element : <UserHome></UserHome>
+            },
+            {
                 path : 'cart',
                 element : <PrivetRouts><Carts></Carts></PrivetRouts>
             },
@@ -68,6 +75,10 @@ const Routers = createBrowserRouter([
                 element : <PrivetRouts><PaymentHistory></PaymentHistory></PrivetRouts>
             },
             // Admin routs
+            {
+                path : 'adminHome',
+                element : <PrivetRouts><AdminHome></AdminHome></PrivetRouts>
+            },
             {
                 path : 'allUsers',
                 element : <PrivetRouts><AllUsers></AllUsers></PrivetRouts>
