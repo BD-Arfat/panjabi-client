@@ -6,9 +6,9 @@ A festive full-stack **e-commerce website** designed to help users shop for **cl
 
 ## 🚀 Live Site
 
-🌐 **Live Demo**: [Click here to visit](#)  
-📁 **Frontend Repository**: [GitHub Link](#)  
-📁 **Backend Repository**: [GitHub Link](#)
+🌐 **Live Demo**: [Click here to visit](https://panjabi-server.web.app/)  
+📁 **Frontend Repository**: [GitHub Link](https://github.com/BD-Arfat/panjabi-client)  
+📁 **Backend Repository**: [GitHub Link](https://github.com/BD-Arfat/panjabi-server)
 
 ---
 
