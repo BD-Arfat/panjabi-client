@@ -9,7 +9,7 @@ const TrendingCategories = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://panjabi-server-three.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         // ইউনিক ক্যাটাগরি ও তার ইমেজ বের করা

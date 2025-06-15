@@ -50,7 +50,7 @@ const Routers = createBrowserRouter([
             {
                 path : '/products/:id',
                 element : <ProductsDetailsPage></ProductsDetailsPage>,
-                loader : ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
+                loader : ({params}) => fetch(`https://panjabi-server-three.vercel.app/products/${params.id}`)
             }
         ]
     }, 
@@ -90,7 +90,7 @@ const Routers = createBrowserRouter([
             {
                 path : 'updateItem/:id',
                 element : <PrivetRouts><AllProductsEdit></AllProductsEdit></PrivetRouts>,
-                loader : ({params})=> fetch(`http://localhost:3000/products/${params.id}`)
+                loader : ({params})=> fetch(`https://panjabi-server-three.vercel.app/products/${params.id}`)
             },
             {
                 path : 'addProduct',

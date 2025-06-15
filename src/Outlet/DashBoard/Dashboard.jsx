@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiHome, FiSettings, FiLogOut } from "react-icons/fi";
-import { MdDashboard } from "react-icons/md";
-import { FaDiceD6, FaUser } from "react-icons/fa";
+import { MdDashboard, MdPayment } from "react-icons/md";
+import { FaDiceD6, FaMoneyCheckAlt, FaShoppingCart, FaUser } from "react-icons/fa";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { Link, Outlet } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuthContext";
@@ -73,27 +73,23 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                             <RiShoppingCart2Line /> All Products
                         </Link>
                         <Link to={'/dashboard/allPayments'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                            <RiShoppingCart2Line /> All Payments
+                            <MdPayment /> All Payments
                         </Link>
                     </> : <>
                         <Link to={'/dashboard/userHome'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
                             <FiHome /> Home || User
                         </Link>
-                        <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                            <FaUser /> Profile
-                        </li>
+                        
                     </>
                 }
 
                 <Link to={'/dashboard/cart'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                    <RiShoppingCart2Line /> Your ordered product
+                    <FaShoppingCart /> Your ordered product
                 </Link>
                 <Link to={'/dashboard/paymentHistory'} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                    <RiShoppingCart2Line /> Your payment history
+                    <FaMoneyCheckAlt /> Your payment history
                 </Link>
-                <li className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                    <FiSettings /> Settings
-                </li>
+                
                 <li onClick={handleLogout} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer text-red-400">
                     <FiLogOut /> Logout
                 </li>

@@ -19,7 +19,7 @@ const CustomerReview = () => {
 
       const [review, setReview] = useState([]);
       useEffect(()=>{
-        fetch('http://localhost:3000/review')
+        fetch('https://panjabi-server-three.vercel.app/review')
         .then(res => res.json())
         .then(data =>{
           setReview(data)

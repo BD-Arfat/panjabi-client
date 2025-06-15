@@ -11,7 +11,7 @@ const ProductSlider = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/products") // API URL পরিবর্তন করুন
+        fetch("https://panjabi-server-three.vercel.app/products") // API URL পরিবর্তন করুন
             .then((res) => res.json())
             .then((data) => {
                 const filterProduct = data.filter(product => product.section === 'New-Arrivals');

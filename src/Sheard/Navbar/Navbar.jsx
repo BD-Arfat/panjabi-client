@@ -56,7 +56,7 @@ const Navbar = () => {
 
   const navItem = <>
   <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
-          <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
+          <li><Link to="/" className="hover:text-blue-500">About</Link></li>
           <li><Link to={`/allProducts/all`} className="hover:text-blue-500">All Products</Link></li>
           {
             user && isuseAdmin && <li><Link to="/dashboard/adminHome" className="hover:text-blue-500">Dashboard</Link></li>
