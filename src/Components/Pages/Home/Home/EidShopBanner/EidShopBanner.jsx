@@ -1,6 +1,5 @@
 import React from 'react';
 import { AiOutlineShoppingCart, AiOutlineArrowRight, AiOutlineGift } from "react-icons/ai";
-import { BiStar, BiSparkles } from "react-icons/bi";
 
 const EidShopBanner = () => {
     return (
@@ -32,9 +31,9 @@ const EidShopBanner = () => {
                 <div className="max-w-4xl">
                     {/* Eid Mubarak Badge */}
                     <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500 to-amber-500 backdrop-blur-sm text-white rounded-full text-sm font-bold mb-6 shadow-xl animate-pulse">
-                        <BiSparkles className="mr-2 text-lg" />
+                        {/* <BiSparkles className="mr-2 text-lg" /> */}
                         Eid Mubarak Collection 2025
-                        <BiSparkles className="ml-2 text-lg" />
+                        {/* <BiSparkles className="ml-2 text-lg" /> */}
                     </div>
                     
                     {/* Main Heading */}
@@ -69,58 +68,7 @@ const EidShopBanner = () => {
                         </button>
                     </div>
                     
-                    {/* Eid Features Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/20 hover:border-emerald-400/40 transition-all duration-300">
-                            <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
-                                <BiStar className="text-white text-2xl" />
-                            </div>
-                            <div>
-                                <h3 className="text-white font-bold text-lg">Premium Quality</h3>
-                                <p className="text-gray-300 text-sm">Authentic Eid wear</p>
-                            </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300">
-                            <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
-                                <AiOutlineGift className="text-white text-2xl" />
-                            </div>
-                            <div>
-                                <h3 className="text-white font-bold text-lg">Perfect Gifts</h3>
-                                <p className="text-gray-300 text-sm">For your loved ones</p>
-                            </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-orange-400/20 hover:border-orange-400/40 transition-all duration-300">
-                            <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
-                                <BiSparkles className="text-white text-2xl" />
-                            </div>
-                            <div>
-                                <h3 className="text-white font-bold text-lg">Festive Special</h3>
-                                <p className="text-gray-300 text-sm">Limited edition items</p>
-                            </div>
-                        </div>
-                    </div>
                     
-                    {/* Eid Stats */}
-                    <div className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-emerald-400/20">
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-yellow-400 mb-1">5K+</div>
-                            <div className="text-gray-300 text-sm">Happy Customers</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-emerald-400 mb-1">200+</div>
-                            <div className="text-gray-300 text-sm">Eid Collections</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-amber-400 mb-1">100%</div>
-                            <div className="text-gray-300 text-sm">Authentic Products</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-orange-400 mb-1">48h</div>
-                            <div className="text-gray-300 text-sm">Fast Delivery</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             
@@ -128,9 +76,9 @@ const EidShopBanner = () => {
             <div className="absolute top-8 right-8 bg-gradient-to-r from-red-500 via-pink-500 to-rose-500 text-white px-6 py-4 rounded-2xl font-bold shadow-2xl animate-pulse border border-yellow-400/30">
                 <div className="text-center">
                     <div className="text-lg flex items-center justify-center">
-                        <BiSparkles className="mr-1" />
+                        {/* <BiSparkles className="mr-1" /> */}
                         EID MEGA SALE
-                        <BiSparkles className="ml-1" />
+                        {/* <BiSparkles className="ml-1" /> */}
                     </div>
                     <div className="text-sm">Up to 60% OFF</div>
                 </div>
