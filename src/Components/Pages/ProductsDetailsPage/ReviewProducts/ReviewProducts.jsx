@@ -118,7 +118,7 @@ const ReviewProducts = () => {
           placeholder="Your Name"
           defaultValue={user?.displayName || ""}
           disabled
-          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 border rounded-md bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
           required
         />
         <input
@@ -127,14 +127,14 @@ const ReviewProducts = () => {
           placeholder="Your Email"
           defaultValue={user?.email || ""}
           disabled
-          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 border rounded-md bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
           required
         />
         <select
-          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-          required
           name="rating"
+          required
           defaultValue=""
+          className="w-full p-2 border rounded-md bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
           <option value="" disabled>
             Select Rating
@@ -146,18 +146,19 @@ const ReviewProducts = () => {
           <option value="5">⭐⭐⭐⭐⭐ (5)</option>
         </select>
         <textarea
-          placeholder="Write your review..."
           name="des"
-          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          placeholder="Write your review..."
           required
+          className="w-full p-2 border rounded-md bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
         ></textarea>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition"
+          className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition dark:bg-blue-600 dark:hover:bg-blue-700"
         >
           Submit Review
         </button>
       </form>
+
 
       {/* ইউজার রিভিউ লিস্ট */}
       <div className="mt-8">
@@ -167,17 +168,17 @@ const ReviewProducts = () => {
             {reviews.map((review) => (
               <div
                 key={review._id}
-                className="border p-4  rounded-md shadow-sm bg-white"
+                className="border p-4  rounded-md shadow-sm "
               >
                 <h4 className="font-bold">{review.name}</h4>
-                <p className="text-sm text-gray-600">{review.email}</p>
+                <p className="text-sm ">{review.email}</p>
                 <p className="text-yellow-500">{`⭐`.repeat(review.rating)}</p>
                 <p className="mt-2">{review.des}</p>
               </div>
             ))}
           </Slider>
         ) : (
-          <p className="text-gray-500">No reviews yet.</p>
+          <p className="">No reviews yet.</p>
         )}
       </div>
     </div>

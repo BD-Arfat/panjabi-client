@@ -45,50 +45,50 @@ const AddProducts = () => {
     }
 
     return (
-        <div className="w-full mx-auto p-6 bg-white shadow-xl rounded-xl mt-10">
+        <div className="w-full mx-auto p-6  shadow-xl rounded-xl mt-10">
             <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">Add New Product</h2>
 
             <form onSubmit={handleAddSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {/* Name */}
                 <div>
                     <label className="text-gray-700 font-medium">Product Name</label>
-                    <input name="name" type="text" required placeholder="MEN'S KNIT T-SHIRT" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                    <input name="name" type="text" required placeholder="MEN'S KNIT T-SHIRT" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800" />
                 </div>
 
                 {/* Price */}
                 <div>
                     <label className="text-gray-700 font-medium">Price</label>
-                    <input name="price" type="number" required placeholder="750" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                    <input name="price" type="number" required placeholder="750" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800" />
                 </div>
 
                 {/* Category */}
                 <div>
                     <label className="text-gray-700 font-medium">Category</label>
-                    <input name="category" type="text" required placeholder="t-shirt" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                    <input name="category" type="text" required placeholder="t-shirt" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800" />
                 </div>
 
                 {/* Category Image */}
                 <div>
                     <label className="text-gray-700 font-medium">Category Image URL</label>
-                    <input name="categoryImage" type="text"  placeholder="https://..." className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                    <input name="categoryImage" type="text"  placeholder="https://..." className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800" />
                 </div>
 
                 {/* Color */}
                 <div>
                     <label className="text-gray-700 font-medium">Color</label>
-                    <input name="color" type="text" required placeholder="light olive green" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                    <input name="color" type="text" required placeholder="light olive green" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800" />
                 </div>
 
                 {/* Section */}
                 <div>
                     <label className="text-gray-700 font-medium">Section</label>
-                    <input name="section" type="text" required placeholder="New-Arrivals" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                    <input name="section" type="text" required placeholder="New-Arrivals" className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800" />
                 </div>
 
                 {/* Details */}
                 <div className="md:col-span-2">
                     <label className="text-gray-700 font-medium">Product Details</label>
-                    <textarea name="details" rows="3" required placeholder="Write something about the product..." className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"></textarea>
+                    <textarea name="details" rows="3" required placeholder="Write something about the product..." className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800"></textarea>
                 </div>
 
                 {/* Images 1-5 */}
@@ -100,14 +100,14 @@ const AddProducts = () => {
                             type="text"
                             required
                             placeholder={`https://...`}
-                            className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                            className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:bg-gray-800"
                         />
                     </div>
                 ))}
 
                 {/* Submit Button */}
                 <div className="md:col-span-2 text-center mt-4">
-                    <button type="submit" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-2 rounded-md font-semibold transition duration-300">
+                    <button type="submit" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-2 rounded-md font-semibold transition duration-300 dark:bg-gray-800">
                         Add Product
                     </button>
                 </div>

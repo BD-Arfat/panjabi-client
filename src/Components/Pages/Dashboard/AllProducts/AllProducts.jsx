@@ -44,17 +44,17 @@ const AllProducts = () => {
     };
 
     if (isLoading) {
-        return <p className="text-center text-lg text-indigo-600">Loading...</p>;
+        return <p className="text-center text-lg ">Loading...</p>;
     }
 
     return (
         <div className="p-8">
-            <h2 className="text-3xl font-bold mb-6 text-center text-indigo-700">All Products</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center ">All Products</h2>
 
             <div className="overflow-x-auto">
-                <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow">
+                <table className="min-w-full   rounded-lg shadow">
                     <thead>
-                        <tr className="bg-indigo-100 text-indigo-700">
+                        <tr className="">
                             <th className="py-3 px-4 text-left">#</th>
                             <th className="py-3 px-4 text-left">Product Name</th>
                             <th className="py-3 px-4 text-left">Price</th>
@@ -67,7 +67,7 @@ const AllProducts = () => {
                     </thead>
                     <tbody>
                         {products.map((product, index) => (
-                            <tr key={product._id} className="border-t border-gray-200 hover:bg-gray-50">
+                            <tr key={product._id} className="border-t ">
                                 <td className="py-3 px-4">{index + 1}</td>
                                 <td className="py-3 px-4 font-medium">{product.name}</td>
                                 <td className="py-3 px-4">${product.price}</td>

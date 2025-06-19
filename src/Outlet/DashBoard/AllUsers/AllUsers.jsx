@@ -85,7 +85,7 @@ const AllUsers = () => {
         <div className="p-6">
             <h1 className='font-bold text-2xl mb-4 text-center'>All Users: {users.length}</h1>
             <div className="overflow-x-auto">
-                <table className="w-full border border-gray-200 rounded-lg text-center">
+                <table className="w-full border  rounded-lg text-center">
                     <thead>
                         <tr className="">
                             <th className="p-3">Image</th>
@@ -99,7 +99,7 @@ const AllUsers = () => {
                     </thead>
                     <tbody>
                         {users.map((user) => (
-                            <tr key={user._id} className="border-t hover:bg-gray-50 transition-all">
+                            <tr key={user._id} className="border-t  transition-all">
                                 <td className="p-3">
                                     <img src={user.image} alt={user.name} className="w-12 h-12 object-cover mx-auto rounded-full" />
                                 </td>

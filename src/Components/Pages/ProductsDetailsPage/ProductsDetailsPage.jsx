@@ -6,6 +6,12 @@ import Swal from "sweetalert2";
 import useAxiosSecur from "../../../hooks/useAxiosSecur";
 import useCarts from "../../../hooks/useCarts";
 import ReviewProducts from "./ReviewProducts/ReviewProducts";
+// Swiper imports
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const ProductsDetailsPage = () => {
     const product = useLoaderData();
@@ -25,7 +31,6 @@ const ProductsDetailsPage = () => {
                 setAllProducts(data);
             });
     }, []);
-
 
     // প্রোডাক্ট ইমেজ অ্যারে
     const images = [
@@ -78,8 +83,8 @@ const ProductsDetailsPage = () => {
         }
     }
 
-    // সম্পর্কিত প্রোডাক্ট গুলি (ধরা যাক, ক্যাটাগরি অনুযায়ী)
-    const relatedProducts = allProducts.filter((p) => p.category === product.category && p._id !== product._id); // একই ক্যাটাগরির প্রোডাক্ট, বর্তমানে দেখানো প্রোডাক্টটি বাদ দিয়ে
+    // সম্পর্কিত প্রোডাক্ট গুলি (ধরা যাক, ক্যাটাগরি অনুযায়ী)
+    const relatedProducts = allProducts.filter((p) => p.category === product.category && p._id !== product._id); // একই ক্যাটাগরির প্রোডাক্ট, বর্তমানে দেখানো প্রোডাক্টটি বাদ দিয়ে
 
     return (
         <>
@@ -134,19 +139,56 @@ const ProductsDetailsPage = () => {
                 </div>
             </div>
 
-            {/* সম্পর্কিত প্রোডাক্টস সেকশন */}
-            <div className="mt-10 md:w-11/12 md:mx-auto">
-                <h3 className="text-xl font-semibold mb-4 text-center md:text-left md:ml-5">Related Products</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-8 m-2">
-                    {relatedProducts.map((relatedProduct) => (
-                        <Productsitem product={relatedProduct}></Productsitem>
-                    ))}
-                </div>
+            {/* সম্পর্কিত প্রোডাক্টস সেকশন with Swiper */}
+            <div className="mt-10 md:w-11/12 md:mx-auto mb-10">
+                <h3 className="text-xl font-semibold mb-6 text-center md:text-left md:ml-5">Related Products</h3>
+                
+                {relatedProducts.length > 0 ? (
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        navigation={true}
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        }}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 25,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                                spaceBetween: 30,
+                            },
+                        }}
+                        className="related-products-swiper px-4"
+                    >
+                        {relatedProducts.map((relatedProduct) => (
+                            <SwiperSlide key={relatedProduct._id}>
+                                <Productsitem product={relatedProduct} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                ) : (
+                    <div className="text-center py-10">
+                        <p className="text-gray-500">No related products found</p>
+                    </div>
+                )}
             </div>
+
             <section className="md:w-11/12 md:mx-auto mb-20">
                 <ReviewProducts></ReviewProducts>
             </section>
-
         </>
     );
 };

@@ -81,11 +81,11 @@ const AdminHome = () => {
   })) || [];
 
   return (
-    <div className="min-h-screen bg-slate-100 p-6">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">🛠 Admin Dashboard</h1>
+    <div className="min-h-screen  p-6">
+      <h1 className="text-3xl font-bold  mb-6">🛠 Admin Dashboard</h1>
 
       {user?.displayName && (
-        <p className="text-lg text-gray-500 mb-6">Welcome, {user.displayName}</p>
+        <p className="text-lg  mb-6">Welcome, {user.displayName}</p>
       )}
 
       {/* Stat Cards */}
@@ -93,13 +93,13 @@ const AdminHome = () => {
         {stats.map((stat, i) => (
           <div
             key={i}
-            className="bg-white p-5 rounded-xl shadow hover:shadow-md transition"
+            className=" p-5 rounded-xl shadow hover:shadow-md transition"
           >
             <div className="flex items-center gap-3">
               <span className="text-2xl">{stat.icon}</span>
               <div>
-                <p className="text-gray-500 text-sm">{stat.title}</p>
-                <p className="text-xl font-bold text-gray-700">{stat.value}</p>
+                <p className=" text-sm">{stat.title}</p>
+                <p className="text-xl font-bold ">{stat.value}</p>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ const AdminHome = () => {
       {/* Charts */}
       <section className="grid md:grid-cols-2 gap-10">
         {/* Bar Chart */}
-        <div className="bg-white p-5 rounded-xl shadow">
+        <div className=" p-5 rounded-xl shadow">
           <h2 className="text-lg font-semibold mb-3">Product Orders by Category</h2>
           <BarChart
             width={400}
@@ -129,7 +129,7 @@ const AdminHome = () => {
         </div>
 
         {/* Pie Chart */}
-        <div className="bg-white p-5 rounded-xl shadow">
+        <div className=" p-5 rounded-xl shadow">
           <h2 className="text-lg font-semibold mb-3">Revenue Distribution</h2>
           <PieChart width={400} height={300}>
             <Pie

@@ -4,7 +4,7 @@ import useAuthContext from './useAuthContext';
 import { useNavigate } from 'react-router-dom';
 
 export const axiosSecur = axios.create({
-    baseURL: `http://localhost:3000`
+    baseURL: `https://panjabi-server-three.vercel.app`
 })
 const useAxiosSecur = () => {
     const {logOut} = useAuthContext();

@@ -22,9 +22,6 @@ const Home = () => {
                     <BrandName></BrandName>
                 </div>
                 <div className="my-12">
-                    <WeddingStyleGuide></WeddingStyleGuide>
-                </div>
-                <div className="my-12">
                     <TrendingCategories></TrendingCategories>
                 </div>
                 <div className="my-12">
